@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# PocketBase local database & backups
+backend/pb_data/
+backend/pb_migrations/
+
+# Node
+**/node_modules/
+**/.next/
+frontend/.env.local
