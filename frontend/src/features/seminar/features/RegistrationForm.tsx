@@ -32,12 +32,10 @@ export function RegistrationForm({ eventTitle, eventSlug }: Props) {
       try {
         return await submitSeminarRegistration(data);
       } catch (err: any) {
-        // Fallback for development if PocketBase server is not yet running
         console.warn(
           "PocketBase submission notice: Ensure backend PocketBase is running on http://127.0.0.1:8090 with collection 'seminar_registrations'.",
           err
         );
-        // If connection fails, rethrow or allow simulation in dev mode
         if (process.env.NODE_ENV === "development") {
           console.info("Simulating successful registration for local testing.");
           return { id: "mock-id-" + Date.now(), ...data };

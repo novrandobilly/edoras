@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Users, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { IntiDinamisLogo } from "@/components/ui/IntiDinamisLogo";
 
 export function Footer() {
   return (
@@ -8,13 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company identity */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white">
-                <Users className="h-5 w-5" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                INTI DINAMIS
-              </span>
+            <div className="inline-flex rounded-xl bg-white/95 px-3 py-2 shadow-sm">
+              <IntiDinamisLogo size="md" />
             </div>
             <p className="text-sm leading-relaxed text-slate-400">
               Empowering organizations and unlocking human potential through

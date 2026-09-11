@@ -2,27 +2,18 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Users, Menu, X, Calendar, ArrowRight } from "lucide-react";
+import { Menu, X, Calendar, ArrowRight } from "lucide-react";
+import { IntiDinamisLogo } from "@/components/ui/IntiDinamisLogo";
 
-export function Navbar() {
+export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-tr from-blue-700 via-indigo-600 to-sky-500 text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
-            <Users className="h-6 w-6" />
-          </div>
-          <div>
-            <span className="block text-xl font-bold tracking-tight text-slate-900 leading-none group-hover:text-blue-600 transition-colors">
-              INTI DINAMIS
-            </span>
-            <span className="text-[11px] font-medium uppercase tracking-wider text-slate-500">
-              Human Resource Development
-            </span>
-          </div>
+        <Link href="/" className="flex items-center group transition-transform group-hover:scale-105">
+          <IntiDinamisLogo size="md" priority />
         </Link>
 
         {/* Desktop Navigation */}
