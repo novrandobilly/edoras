@@ -1,5 +1,5 @@
 import React from "react";
-import { Image as ImageIcon, Users, Sparkles } from "lucide-react";
+import { Image as ImageIcon, Users, Sparkles, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ImagePlaceholderProps {
@@ -7,7 +7,7 @@ interface ImagePlaceholderProps {
   subtitle?: string;
   aspectRatio?: "video" | "square" | "portrait" | "wide" | "tall";
   className?: string;
-  icon?: "image" | "team" | "event";
+  icon?: "image" | "team" | "event" | "video";
   badge?: string;
 }
 
@@ -28,7 +28,13 @@ export function ImagePlaceholder({
   }[aspectRatio];
 
   const IconComponent =
-    icon === "team" ? Users : icon === "event" ? Sparkles : ImageIcon;
+    icon === "team"
+      ? Users
+      : icon === "event"
+      ? Sparkles
+      : icon === "video"
+      ? Play
+      : ImageIcon;
 
   return (
     <div

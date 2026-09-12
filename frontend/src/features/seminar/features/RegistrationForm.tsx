@@ -31,7 +31,7 @@ export function RegistrationForm({ eventTitle, eventSlug }: Props) {
     mutationFn: async (data: SeminarRegistrationInput) => {
       try {
         return await submitSeminarRegistration(data);
-      } catch (err: any) {
+      } catch (err: unknown) {
         console.warn(
           "PocketBase submission notice: Ensure backend PocketBase is running on http://127.0.0.1:8090 with collection 'seminar_registrations'.",
           err

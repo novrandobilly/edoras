@@ -5,7 +5,6 @@ import {
   MapPin,
   ArrowRight,
   ShieldCheck,
-  Heart,
 } from "lucide-react";
 import { IntiDinamisLogo } from "@/components/ui/IntiDinamisLogo";
 
