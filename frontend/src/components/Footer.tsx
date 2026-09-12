@@ -96,6 +96,11 @@ export function Footer() {
                   BrainPower® Training
                 </Link>
               </li>
+              <li>
+                <Link href="/#produk-jasa" className="hover:text-red-400 transition-colors">
+                  Event Organizing
+                </Link>
+              </li>
             </ul>
           </div>
 
