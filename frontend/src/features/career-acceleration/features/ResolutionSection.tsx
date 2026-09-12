@@ -16,6 +16,8 @@ import {
   Clock,
   Video,
   Lock,
+  Tag,
+  MessageCircle,
 } from "lucide-react";
 
 interface Props {
@@ -140,10 +142,38 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
               </div>
             </div>
 
+            {/* Price Stack Box (Reference: Coach Erkelin pricing summary widget) */}
+            <div className="rounded-2xl border border-red-200 bg-red-50/40 p-5 text-xs sm:text-sm">
+              <div className="flex items-center justify-between pb-3 border-b border-red-200/70">
+                <div className="flex items-center gap-2 font-bold text-slate-900">
+                  <Tag className="h-4 w-4 text-red-600" />
+                  <span>Rincian Biaya Seminar</span>
+                </div>
+                <span className="rounded-md bg-red-600 px-2 py-0.5 text-[10px] font-bold text-white uppercase">
+                  Promo Spesial
+                </span>
+              </div>
+
+              <div className="mt-3 space-y-2 text-slate-600">
+                <div className="flex justify-between">
+                  <span>Investasi Kelas Normal</span>
+                  <span className="line-through text-slate-400">Rp 750.000</span>
+                </div>
+                <div className="flex justify-between text-emerald-700 font-medium">
+                  <span>Subsidi Beasiswa CSR PT Inti Dinamis</span>
+                  <span>-Rp 750.000</span>
+                </div>
+                <div className="pt-2 border-t border-red-200/70 flex justify-between items-center font-bold text-slate-900 text-sm sm:text-base">
+                  <span>Total yang Anda Bayar</span>
+                  <span className="text-emerald-600 text-lg">Rp 0 (GRATIS)</span>
+                </div>
+              </div>
+            </div>
+
             {/* What is included checklist */}
             <div className="space-y-2.5">
               <h4 className="text-xs font-bold uppercase tracking-widest text-slate-400">
-                Semua Keuntungan Ini Termasuk:
+                Semua Fasilitas Ini Termasuk:
               </h4>
               {deliverables.map((item) => (
                 <div key={item} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
@@ -153,11 +183,23 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
               ))}
             </div>
 
-            <div className="rounded-xl bg-amber-50 border border-amber-200 p-4 text-xs text-amber-900 flex items-start gap-2.5">
-              <Lock className="h-4 w-4 text-amber-700 shrink-0 mt-0.5" />
-              <p>
-                <strong>Kapasitas Terbatas:</strong> Demi menjaga kualitas interaksi dalam sesi
-                tanya-jawab, kuota dibatasi hanya untuk 150 peserta pertama.
+            {/* Quota Remaining Progress Bar */}
+            <div className="rounded-2xl border border-amber-200 bg-amber-50/70 p-4 text-xs text-amber-900">
+              <div className="flex items-center justify-between font-bold mb-1.5">
+                <span className="flex items-center gap-1.5">
+                  <Lock className="h-3.5 w-3.5 text-amber-700" />
+                  Sisa Kuota Live Zoom:
+                </span>
+                <span className="text-red-700">Tersisa 19 dari 150 Kursi</span>
+              </div>
+              <div className="w-full bg-amber-200 rounded-full h-2.5 overflow-hidden">
+                <div
+                  className="bg-gradient-to-r from-amber-500 to-red-600 h-2.5 rounded-full"
+                  style={{ width: "87%" }}
+                />
+              </div>
+              <p className="mt-2 text-[11px] text-amber-800">
+                Pendaftaran akan otomatis ditutup saat batas 150 peserta tercapai.
               </p>
             </div>
           </div>
@@ -172,6 +214,9 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                 <h3 className="mt-4 text-2xl font-black text-slate-900">
                   Pendaftaran Berhasil Dikonfirmasi!
                 </h3>
+                <h4 className="mt-1 text-sm font-bold text-emerald-700">
+                  Cek WhatsApp & Email Inbox Anda!
+                </h4>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed max-w-md mx-auto">
                   Terima kasih, <strong className="text-slate-900">{submittedData.fullName}</strong>!
                   Kursi Anda untuk seminar <span className="font-semibold text-red-600">{eventTitle}</span> telah diamankan.
@@ -203,15 +248,27 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                 </div>
 
                 <p className="mt-5 text-xs text-slate-500">
-                  Tautan akses Zoom dan panduan teknis telah dikirimkan ke email Anda. Tim kami juga akan mengirimkan reminder via WhatsApp 1 hari sebelum acara dimulai.
+                  Tautan akses Zoom dan panduan teknis telah dikirimkan ke email Anda. Tim panitia juga akan mengirimkan reminder via WhatsApp 1 hari sebelum acara dimulai.
                 </p>
 
-                <button
-                  onClick={handleReset}
-                  className="mt-6 inline-flex items-center justify-center rounded-xl bg-slate-900 px-6 py-3 text-xs sm:text-sm font-semibold text-white hover:bg-slate-800 transition-colors shadow-sm"
-                >
-                  Daftarkan Rekan Kerja / Tim Anda
-                </button>
+                <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a
+                    href="https://wa.me/628118888000?text=Halo%20Admin%20Inti%20Dinamis,%20saya%20sudah%20mendaftar%20seminar%20Career%20Acceleration"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white hover:bg-emerald-700 transition-colors"
+                  >
+                    <MessageCircle className="h-4 w-4" />
+                    <span>Konfirmasi Cepat via WhatsApp</span>
+                  </a>
+
+                  <button
+                    onClick={handleReset}
+                    className="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white hover:bg-slate-800 transition-colors"
+                  >
+                    Daftarkan Rekan Kerja / Tim Anda
+                  </button>
+                </div>
               </div>
             ) : (
               <form
@@ -285,6 +342,9 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                         placeholder="0812-3456-7890"
                         className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20 transition-all"
                       />
+                      <span className="block text-[11px] text-slate-400 mt-1">
+                        *Tautan Zoom akan dikirimkan langsung ke nomor WhatsApp ini.
+                      </span>
                     </div>
                   </div>
 

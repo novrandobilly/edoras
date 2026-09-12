@@ -15,6 +15,7 @@ import { TargetMarketSection } from "./features/TargetMarketSection";
 import { CostOfInactionSection } from "./features/CostOfInactionSection";
 import { ResolutionSection } from "./features/ResolutionSection";
 import { FaqSection } from "./features/FaqSection";
+import { PreFooterCta } from "./features/PreFooterCta";
 import { LandingFooter } from "./features/LandingFooter";
 import { StickyMobileCta } from "./features/StickyMobileCta";
 
@@ -81,6 +82,9 @@ export function CareerAccelerationFeature() {
         {/* 17. FAQ */}
         <FaqSection />
       </main>
+
+      {/* Pre-Footer Call to Action Banner (Reference: Coach Erkelin pre-footer conversion bar) */}
+      <PreFooterCta />
 
       {/* Focused Footer (Logo redirects back to home) */}
       <LandingFooter />

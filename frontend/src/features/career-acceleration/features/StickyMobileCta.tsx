@@ -7,11 +7,14 @@ export function StickyMobileCta() {
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-slate-200/90 bg-white/95 backdrop-blur-md px-4 py-3 shadow-lg">
       <div className="flex items-center justify-between gap-3">
         <div className="flex flex-col">
-          <span className="inline-flex items-center gap-1 text-[11px] font-bold text-red-600">
-            <Sparkles className="h-3 w-3 animate-pulse" />
-            Live Zoom Seminar
+          <div className="flex items-center gap-1.5">
+            <span className="line-through text-[10px] text-slate-400">Rp 750.000</span>
+            <span className="text-xs font-black text-emerald-600">Rp 0 (FREE)</span>
+          </div>
+          <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-slate-500">
+            <Sparkles className="h-2.5 w-2.5 text-red-600 animate-pulse" />
+            Live Zoom • Kuota Terbatas
           </span>
-          <span className="text-xs font-bold text-slate-900">100% Gratis RSVP</span>
         </div>
 
         <a
