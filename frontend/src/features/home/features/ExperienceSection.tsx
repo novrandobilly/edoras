@@ -25,24 +25,20 @@ export function ExperienceSection() {
   ];
 
   return (
-    <section id="pengalaman" className="py-20 lg:py-28 bg-slate-50 border-b border-slate-200/80">
+    <section id="pengalaman" className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Section Header - Clean & punchy */}
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-red-600">
             Pengalaman
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
             Dipercaya oleh Pemimpin Industri
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
-            Jejak rekam kemitraan strategis dalam pengembangan SDM dan transformasi organisasi di
-            berbagai sektor industri di Indonesia.
-          </p>
         </div>
 
         {/* Client Cards Grid */}
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {clients.map((client) => (
             <div
               key={client.name}
@@ -62,8 +58,8 @@ export function ExperienceSection() {
         </div>
 
         {/* Industry Focus Pills */}
-        <div className="mt-14 pt-10 border-t border-slate-200 text-center">
-          <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">
+        <div className="mt-12 pt-8 border-t border-slate-200 text-center">
+          <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3.5">
             Cakupan Sektor Industri:
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">

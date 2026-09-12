@@ -6,44 +6,40 @@ export function TeamSection() {
       name: "John Arif Purba, ACC",
       title: "Psychologist, Associate Certified Coach, Master NLP Practitioner",
       summary:
-        "Spesialis penyusunan strategi sistem pengelolaan SDM dan teknik pemrograman pikiran manusia untuk menciptakan perubahan perilaku yang berdampak nyata.",
+        "Spesialis strategi sistem SDM terintegrasi dan modifikasi perilaku berbasis NLP & coaching berstandar internasional.",
       credentials: ["Psikolog", "ACC Coach (ICF)", "Master NLP"],
     },
     {
       name: "Gaby Anniwati",
       title: "Psychologist, Certified Professional Coach, Clinical Hypnotherapist",
       summary:
-        "Berpengalaman 20+ tahun dalam talent recruitment, asesmen kompetensi terintegrasi, dan coaching kepemimpinan untuk eksekutif perusahaan.",
+        "Spesialis talent recruitment, asesmen kompetensi terintegrasi, dan coaching kepemimpinan eksekutif.",
       credentials: ["Psikolog", "Certified Coach", "Hypnotherapist"],
     },
     {
       name: "Risman Purba",
       title: "BrainPower® Trainer, Certified Professional Coach",
       summary:
-        "Praktisi modifikasi perilaku puluhan tahun dan kreator konsep BrainPower® untuk mendorong lompatan produktivitas dan efektivitas individu.",
+        "Praktisi modifikasi perilaku dan kreator konsep BrainPower® untuk akselerasi produktivitas serta ketahanan mental.",
       credentials: ["BrainPower® Creator", "Behavioral Trainer", "Certified Coach"],
     },
   ];
 
   return (
-    <section id="tim-ahli" className="py-20 lg:py-28 bg-slate-50 border-b border-slate-200/80">
+    <section id="tim-ahli" className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Section Header - Clean without redundant description */}
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-red-600">
             Tim Ahli
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
             Kenali Partner Anda
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-600">
-            Didampingi langsung oleh psikolog berlisensi dan coach bersertifikasi internasional
-            dengan pengalaman lebih dari dua dekade.
-          </p>
         </div>
 
         {/* Team Cards Grid (3 Columns) */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
           {members.map((member) => (
             <div
               key={member.name}
@@ -59,19 +55,19 @@ export function TeamSection() {
                   className="group-hover:border-red-300 transition-colors"
                 />
 
-                <h3 className="mt-5 text-lg font-bold text-slate-950 group-hover:text-red-600 transition-colors">
+                <h3 className="mt-4 text-base sm:text-lg font-bold text-slate-950 group-hover:text-red-600 transition-colors">
                   {member.name}
                 </h3>
                 <p className="mt-1 text-xs font-semibold text-slate-500 leading-snug">
                   {member.title}
                 </p>
-                <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <p className="mt-2.5 text-xs text-slate-600 leading-relaxed font-normal">
                   {member.summary}
                 </p>
               </div>
 
               {/* Badges */}
-              <div className="mt-5 pt-4 border-t border-slate-100 flex flex-wrap gap-1.5">
+              <div className="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-1.5">
                 {member.credentials.map((badge) => (
                   <span
                     key={badge}

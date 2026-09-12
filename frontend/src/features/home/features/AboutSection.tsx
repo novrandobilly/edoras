@@ -6,7 +6,7 @@ export function AboutSection() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: Clear Single Headline & Purpose (7 cols) */}
-          <div className="lg:col-span-7 space-y-3.5">
+          <div className="lg:col-span-7 space-y-3">
             <span className="text-xs font-bold uppercase tracking-widest text-red-600">
               Tentang Kami
             </span>
@@ -14,9 +14,8 @@ export function AboutSection() {
               Partner Anda Menuju Organisasi yang Lebih Baik
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              Didirikan tahun <strong>2005</strong>, Inti Dinamis bergerak dalam jasa konsultan organisasi
-              dan pengembangan sumber daya manusia. Kami mendampingi rekan bisnis mengelola dan
-              mengembangkan Human Capital untuk menjamin tercapainya visi organisasi.
+              Didirikan tahun 2005, Inti Dinamis mendampingi perusahaan mengoptimalkan Human Capital
+              sebagai daya saing utama untuk menjamin tercapainya visi organisasi.
             </p>
             <div className="pt-1">
               <div className="inline-flex items-center gap-2 rounded-xl bg-red-50/80 border border-red-100 px-3.5 py-2 text-xs text-slate-800">
@@ -30,7 +29,7 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right Column: Compact Thought-Provoking Quote Box (5 cols) */}
+          {/* Right Column: Compact Quote Box (5 cols) */}
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl border border-slate-200/90 bg-white p-6 shadow-2xs">
               <Quote className="h-5 w-5 text-red-600 mb-2.5 opacity-80" />

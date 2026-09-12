@@ -16,60 +16,57 @@ export function ServicesSection() {
       title: "Performance & Leadership Coaching",
       icon: Target,
       summary:
-        "Pendampingan terstruktur berbasis standar ICF untuk membuka potensi kepemimpinan dan mengakselerasi performa.",
+        "Pendampingan berbasis standar ICF untuk membuka potensi kepemimpinan dan mengakselerasi performa eksekutif.",
     },
     {
       title: "Training (Pelatihan & Pengembangan SDM)",
       icon: GraduationCap,
       summary:
-        "Program in-house training dan experiential learning (outbound) untuk memperkuat kompetensi dan sinergi tim.",
+        "Program in-house dan outbound untuk memperkuat kompetensi teknis, komunikasi, dan sinergi tim.",
     },
     {
       title: "HR & OD Consulting",
       icon: Network,
       summary:
-        "Perancangan arsitektur dan sistem manajemen SDM yang selaras dengan visi, misi, dan nilai-nilai korporasi.",
+        "Perancangan sistem manajemen SDM dan struktur organisasi yang selaras dengan visi korporasi.",
     },
     {
       title: "Potential Assessment",
       icon: BrainCircuit,
       summary:
-        "Pemeriksaan psikologis komprehensif dan assessment center objektif untuk pemetaan potensi, promosi, dan suksesi.",
+        "Pemeriksaan psikologis komprehensif dan assessment center untuk pemetaan potensi, promosi, dan suksesi.",
     },
     {
       title: "Recruitment & Executive Search",
       icon: UserCheck,
       summary:
-        "Penyediaan talenta profesional dan eksekutif yang selaras secara kompetensi teknis dan kecocokan budaya kerja.",
+        "Penyediaan talenta profesional dan eksekutif yang selaras secara kualifikasi dan budaya kerja.",
     },
     {
       title: "BrainPower®",
       icon: Zap,
       summary:
-        "Metodologi modifikasi perilaku dan pemrograman pikiran manusia untuk mendongkrak ketahanan mental dan produktivitas.",
+        "Modifikasi perilaku dan pemrograman pikiran manusia untuk mendongkrak ketahanan mental dan produktivitas.",
     },
     {
       title: "Event Organizing",
       icon: CalendarDays,
       summary:
-        "Penyelenggaraan event korporasi, seminar skala besar, workshop eksekutif, dan gathering secara profesional.",
+        "Penyelenggaraan event korporasi, seminar besar, workshop eksekutif, dan gathering secara profesional.",
     },
   ];
 
   return (
     <section id="produk-jasa" className="py-14 lg:py-20 bg-white border-b border-slate-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Section Header - Clean & punchy without redundant description */}
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-red-600">
             Produk & Jasa
           </span>
-          <h2 className="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
             Solusi Pengembangan Human Capital
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-slate-600">
-            7 pilar layanan terpadu yang dirancang fleksibel untuk menjawab kebutuhan organisasi Anda.
-          </p>
         </div>
 
         {/* 7 Compact Cards in 2 Rows (4 Top, 3 Bottom on Laptop) */}
