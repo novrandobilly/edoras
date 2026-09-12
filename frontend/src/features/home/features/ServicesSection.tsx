@@ -1,142 +1,127 @@
+import Link from "next/link";
 import {
+  Target,
   GraduationCap,
+  Network,
   BrainCircuit,
-  Calendar,
   UserCheck,
-  CheckCircle2,
+  Zap,
+  ArrowRight,
 } from "lucide-react";
 
 export function ServicesSection() {
+  const services = [
+    {
+      title: "Performance & Leadership Coaching",
+      icon: Target,
+      summary:
+        "Pendampingan terstruktur berbasis standar ICF untuk membuka potensi kepemimpinan dan mengakselerasi target performa eksekutif.",
+      tags: ["Executive Coaching", "Mindset Transformation", "Leadership"],
+    },
+    {
+      title: "Training (Pelatihan & Pengembangan SDM)",
+      icon: GraduationCap,
+      summary:
+        "Program pembelajaran in-house dan experiential learning (outbound) yang dirancang untuk memperkuat kompetensi dan sinergi tim.",
+      tags: ["In-House Training", "Team Cohesion", "Supervisory"],
+    },
+    {
+      title: "HR & OD Consulting",
+      icon: Network,
+      summary:
+        "Perancangan sistem dan arsitektur pengelolaan SDM yang terintegrasi dengan visi, misi, dan nilai-nilai korporasi.",
+      tags: ["Organization Design", "Job Grading", "Budaya Kerja"],
+    },
+    {
+      title: "Potential Assessment",
+      icon: BrainCircuit,
+      summary:
+        "Evaluasi psikologis komprehensif dan assessment center objektif untuk pemetaan potensi, seleksi, serta perencanaan suksesi.",
+      tags: ["Psychometric Testing", "Assessment Center", "Talent Mapping"],
+    },
+    {
+      title: "Recruitment & Executive Search",
+      icon: UserCheck,
+      summary:
+        "Penyediaan talenta profesional berkualitas yang selaras secara kompetensi teknis dan kecocokan budaya kerja.",
+      tags: ["Executive Search", "Talent Sourcing", "Cultural Fit"],
+    },
+    {
+      title: "BrainPower®",
+      icon: Zap,
+      summary:
+        "Metodologi modifikasi perilaku dan pemrograman pikiran manusia untuk meningkatkan daya fokus, ketahanan mental, dan produktivitas.",
+      tags: ["Modifikasi Perilaku", "Peak Productivity", "Mental Toughness"],
+    },
+  ];
+
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="produk-jasa" className="py-20 lg:py-28 bg-white border-b border-slate-100">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-xs font-bold uppercase tracking-widest text-blue-600">
-            Our Core Services
+          <span className="text-xs font-bold uppercase tracking-widest text-red-600">
+            Produk & Jasa
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
+            Solusi Pengembangan Human Capital
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Holistic Human Capital Solutions
-          </p>
-          <p className="mt-4 text-base text-slate-600">
-            From talent discovery to continuous leadership development, we
-            provide end-to-end HR services tailored to your organizational goals.
+          <p className="mt-4 text-base sm:text-lg text-slate-600">
+            6 pilar layanan terpadu yang dirancang untuk menjawab tantangan strategis sumber daya
+            manusia di organisasi Anda.
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* Service 1 */}
-          <div className="group relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-              <GraduationCap className="h-6 w-6" />
-            </div>
-            <h3 className="mt-5 text-xl font-bold text-slate-900">
-              Training & Workshops
-            </h3>
-            <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-              Experiential learning programs focusing on leadership development,
-              effective communication, team cohesion, agility, and supervisory excellence.
-            </p>
-            <ul className="mt-4 space-y-2 text-xs font-medium text-slate-500">
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Leadership & Management
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Service Excellence
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                High-Performing Teams
-              </li>
-            </ul>
-          </div>
+        {/* 6 Clean Cards Grid */}
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.title}
+                className="group flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-7 transition-all duration-200 hover:border-red-200 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-800 border border-slate-200/70 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-colors">
+                    <Icon className="h-6 w-6" />
+                  </div>
 
-          {/* Service 2 */}
-          <div className="group relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-100 text-indigo-700 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-              <BrainCircuit className="h-6 w-6" />
-            </div>
-            <h3 className="mt-5 text-xl font-bold text-slate-900">
-              Psychological Assessment
-            </h3>
-            <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-              Objective, scientifically validated assessments for recruitment,
-              talent mapping, managerial competencies, and succession planning.
-            </p>
-            <ul className="mt-4 space-y-2 text-xs font-medium text-slate-500">
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Cognitive & Aptitude Testing
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Personality & Culture Fit
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Assessment Center Methods
-              </li>
-            </ul>
-          </div>
+                  <h3 className="mt-5 text-lg font-bold text-slate-900 group-hover:text-red-600 transition-colors">
+                    {service.title}
+                  </h3>
 
-          {/* Service 3 */}
-          <div className="group relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-100 text-sky-700 group-hover:bg-sky-600 group-hover:text-white transition-colors">
-              <Calendar className="h-6 w-6" />
-            </div>
-            <h3 className="mt-5 text-xl font-bold text-slate-900">
-              Seminars & Webinars
-            </h3>
-            <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-              High-impact online and offline seminars featuring thought leaders
-              addressing future-of-work trends, HR tech, and organizational resilience.
-            </p>
-            <ul className="mt-4 space-y-2 text-xs font-medium text-slate-500">
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Executive HR Conferences
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Public Online Webinars
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Interactive Q&A Masterclasses
-              </li>
-            </ul>
-          </div>
+                  <p className="mt-3 text-sm text-slate-600 leading-relaxed font-normal">
+                    {service.summary}
+                  </p>
+                </div>
 
-          {/* Service 4 */}
-          <div className="group relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-              <UserCheck className="h-6 w-6" />
-            </div>
-            <h3 className="mt-5 text-xl font-bold text-slate-900">
-              Talent Recruitment
-            </h3>
-            <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-              Strategic talent acquisition and executive search service to
-              connect your enterprise with verified top-tier professionals.
-            </p>
-            <ul className="mt-4 space-y-2 text-xs font-medium text-slate-500">
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Executive Headhunting
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                Specialized Talent Sourcing
-              </li>
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-4 w-4 text-emerald-600" />
-                In-Depth Background Vetting
-              </li>
-            </ul>
-          </div>
+                <div className="mt-6 pt-5 border-t border-slate-100">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {service.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-md bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-600"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link
+                    href="/#kontak"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-red-600 group-hover:text-red-700 transition-colors"
+                  >
+                    <span>Konsultasikan Kebutuhan</span>
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+
+export default ServicesSection;

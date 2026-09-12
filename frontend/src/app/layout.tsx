@@ -14,9 +14,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Inti Dinamis | Human Resource Development, Training & Psychological Assessment",
+  title: "PT Inti Dinamis | Konsultan Pengembangan SDM, Training & Asesmen Organisasi",
   description:
-    "Inti Dinamis empowers organizations through corporate training, interactive workshops, insightful seminars, psychological assessments, and executive talent recruitment.",
+    "PT Inti Dinamis - Mitra konsultan SDM dan organisasi sejak 2005. Mengembangkan Human Capital menjadi kontributor hebat melalui Performance Coaching, Pelatihan Modifikasi Perilaku BrainPower®, dan Asesmen Psikologis.",
+  keywords: [
+    "Inti Dinamis",
+    "Konsultan SDM Jakarta",
+    "Training SDM",
+    "Executive Coaching Indonesia",
+    "BrainPower",
+    "Asesmen Psikologis Perusahaan",
+    "Outbound Training",
+    "HR OD Consulting",
+  ],
   icons: {
     icon: "/logo-intidinamis.svg",
     shortcut: "/logo-intidinamis.svg",
@@ -31,10 +41,10 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="id"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-slate-50 font-sans text-slate-900">
         <AppProviders>{children}</AppProviders>
       </body>
     </html>
