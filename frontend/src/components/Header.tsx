@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X, PhoneCall } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { IntiDinamisLogo } from "@/components/ui/IntiDinamisLogo";
 import { cn } from "@/lib/utils";
 
@@ -13,8 +13,6 @@ export function Header() {
     { label: "Tentang Kami", href: "/#tentang-kami" },
     { label: "Produk & Jasa", href: "/#produk-jasa" },
     { label: "Pengalaman", href: "/#pengalaman" },
-    { label: "Galeri", href: "/#galeri" },
-    { label: "Tim Ahli", href: "/#tim-ahli" },
     { label: "Kontak", href: "/#kontak" },
   ];
 
@@ -38,23 +36,13 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "px-3 py-1.5 rounded-full transition-all hover:text-slate-950 hover:bg-slate-100/90 text-slate-700",
+                "px-3.5 py-1.5 rounded-full transition-all hover:text-slate-950 hover:bg-slate-100/90 text-slate-700",
               )}
             >
               {link.label}
             </Link>
           ))}
         </nav>
-
-        {/* Right CTA Button - Clean Black Pill */}
-        <div className="hidden md:flex items-center gap-2">
-          <Link
-            href="/#kontak"
-            className="inline-flex items-center justify-center rounded-full bg-slate-950 px-5 py-2 text-xs sm:text-sm font-bold text-white hover:bg-slate-800 transition-all shadow-xs active:scale-95"
-          >
-            <span>Konsultasi</span>
-          </Link>
-        </div>
 
         {/* Mobile menu button */}
         <button
@@ -84,16 +72,6 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="pt-3 mt-1 border-t border-slate-100">
-              <Link
-                href="/#kontak"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 w-full rounded-full bg-slate-950 px-4 py-2.5 text-center text-xs font-bold text-white shadow-md hover:bg-slate-800 transition-colors"
-              >
-                <PhoneCall className="h-3.5 w-3.5" />
-                <span>Konsultasi Sekarang</span>
-              </Link>
-            </div>
           </nav>
         </div>
       )}

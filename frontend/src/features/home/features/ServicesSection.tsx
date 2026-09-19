@@ -13,42 +13,49 @@ import {
 export function ServicesSection() {
   const services = [
     {
+      id: "leadership-coaching",
       title: "Performance & Leadership Coaching",
       icon: Target,
       summary:
         "Pendampingan berbasis standar ICF untuk membuka potensi kepemimpinan dan mengakselerasi performa eksekutif.",
     },
     {
+      id: "training-sdm",
       title: "Training (Pelatihan & Pengembangan SDM)",
       icon: GraduationCap,
       summary:
         "Program in-house dan outbound untuk memperkuat kompetensi teknis, komunikasi, dan sinergi tim.",
     },
     {
+      id: "hr-od-consulting",
       title: "HR & OD Consulting",
       icon: Network,
       summary:
         "Perancangan sistem manajemen SDM dan struktur organisasi yang selaras dengan visi korporasi.",
     },
     {
+      id: "potential-assessment",
       title: "Potential Assessment",
       icon: BrainCircuit,
       summary:
         "Pemeriksaan psikologis komprehensif dan assessment center untuk pemetaan potensi, promosi, dan suksesi.",
     },
     {
+      id: "recruitment-executive-search",
       title: "Recruitment & Executive Search",
       icon: UserCheck,
       summary:
         "Penyediaan talenta profesional dan eksekutif yang selaras secara kualifikasi dan budaya kerja.",
     },
     {
+      id: "brainpower",
       title: "BrainPower®",
       icon: Zap,
       summary:
         "Modifikasi perilaku dan pemrograman pikiran manusia untuk mendongkrak ketahanan mental dan produktivitas.",
     },
     {
+      id: "event-organizing",
       title: "Event Organizing",
       icon: CalendarDays,
       summary:
@@ -79,7 +86,8 @@ export function ServicesSection() {
             return (
               <div
                 key={service.title}
-                className="group flex flex-col justify-between w-full sm:w-[calc(50%-10px)] lg:w-[calc(25%-16px)] rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xs hover:border-red-200 hover:shadow-md transition-all hover:-translate-y-0.5"
+                id={service.id}
+                className="group flex flex-col justify-between w-full sm:w-[calc(50%-10px)] lg:w-[calc(25%-16px)] rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xs hover:border-red-200 hover:shadow-md transition-all hover:-translate-y-0.5 scroll-mt-28"
               >
                 <div>
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50 text-slate-800 border border-slate-200/70 group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-colors">

@@ -84,28 +84,28 @@ export function Footer() {
           {/* Services - 3 cols */}
           <div className="lg:col-span-3">
             <h3 className="text-xs font-bold uppercase tracking-widest text-white">
-              Pilar Layanan
+              Pilar Pelayanan
             </h3>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li>
                 <Link
-                  href="/#produk-jasa"
+                  href="/#leadership-coaching"
                   className="hover:text-red-400 transition-colors"
                 >
-                  Leadership Coaching
+                  Performance & Leadership Coaching
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#produk-jasa"
+                  href="/#training-sdm"
                   className="hover:text-red-400 transition-colors"
                 >
-                  In-House Training & Outbound
+                  Training (Pelatihan SDM)
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#produk-jasa"
+                  href="/#hr-od-consulting"
                   className="hover:text-red-400 transition-colors"
                 >
                   HR & OD Consulting
@@ -113,7 +113,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#produk-jasa"
+                  href="/#potential-assessment"
                   className="hover:text-red-400 transition-colors"
                 >
                   Potential Assessment
@@ -121,23 +121,23 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#produk-jasa"
+                  href="/#recruitment-executive-search"
                   className="hover:text-red-400 transition-colors"
                 >
-                  Recruitment & Placement
+                  Recruitment & Executive Search
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#produk-jasa"
+                  href="/#brainpower"
                   className="hover:text-red-400 transition-colors"
                 >
-                  BrainPower® Training
+                  BrainPower®
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#produk-jasa"
+                  href="/#event-organizing"
                   className="hover:text-red-400 transition-colors"
                 >
                   Event Organizing

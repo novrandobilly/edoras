@@ -67,7 +67,10 @@ export function ExperienceSection() {
   ];
 
   return (
-    <section id="pengalaman" className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80">
+    <section
+      id="pengalaman"
+      className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section Header - Clean & punchy */}
         <div className="text-center max-w-2xl mx-auto">
@@ -75,10 +78,11 @@ export function ExperienceSection() {
             Pengalaman
           </span>
           <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
-            Dipercaya oleh Pemimpin Industri
+            Dipercaya oleh Beragam Industri
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600">
-            Berbagai perusahaan multinasional, korporasi nasional, dan institusi terkemuka yang telah bermitra bersama PT Inti Dinamis.
+            Berbagai perusahaan multinasional, korporasi nasional, dan institusi
+            terkemuka yang telah bermitra bersama PT Inti Dinamis.
           </p>
         </div>
 
@@ -92,7 +96,12 @@ export function ExperienceSection() {
               {/* Client Logo Container */}
               <div className="flex h-20 w-full items-center justify-center p-2 overflow-hidden">
                 <div className="flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                  <div className={cn("flex items-center justify-center", client.scaleClass)}>
+                  <div
+                    className={cn(
+                      "flex items-center justify-center",
+                      client.scaleClass,
+                    )}
+                  >
                     <Image
                       src={client.logo}
                       alt={`Logo ${client.name}`}
