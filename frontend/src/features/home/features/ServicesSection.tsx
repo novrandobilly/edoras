@@ -57,7 +57,10 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="produk-jasa" className="py-14 lg:py-20 bg-white border-b border-slate-100">
+    <section
+      id="produk-jasa"
+      className="py-14 lg:py-20 bg-white border-b border-slate-100"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header - Clean & punchy without redundant description */}
         <div className="text-center max-w-2xl mx-auto">
@@ -65,7 +68,7 @@ export function ServicesSection() {
             Produk & Jasa
           </span>
           <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
-            Solusi Pengembangan Human Capital
+            Solusi Pengembangan Sumber Daya Manusia
           </h2>
         </div>
 

@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className="fixed top-3 sm:top-5 left-0 right-0 z-50 px-3 sm:px-6 w-full flex flex-col items-center pointer-events-none">
       {/* Floating Pill Capsule Bar */}
-      <div className="w-full max-w-5xl rounded-full bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-lg shadow-black/5 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between pointer-events-auto transition-all">
+      <div className="w-full max-w-7xl rounded-full bg-white/95 backdrop-blur-md border border-slate-200/80 shadow-lg shadow-black/5 px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between pointer-events-auto transition-all">
         {/* Brand Logo - Original Brand Colors */}
         <Link
           href="/"

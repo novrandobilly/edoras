@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section className="relative bg-slate-950 overflow-hidden">
       {/* Top Main Hero Canvas with Background Photo */}
-      <div className="relative min-h-[580px] sm:min-h-[660px] lg:min-h-[740px] flex items-center overflow-hidden">
+      <div className="relative min-h-145 sm:min-h-165 lg:min-h-185 flex items-center overflow-hidden">
         {/* Background Photograph */}
         <div className="absolute inset-0 z-0">
           <Image

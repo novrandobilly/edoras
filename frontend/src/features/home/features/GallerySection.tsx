@@ -56,12 +56,15 @@ export function GallerySection() {
   return (
     <section id="galeri" className="py-14 lg:py-20 bg-white border-b border-slate-100">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Header - Clean without redundant description */}
-        <div className="text-center max-w-2xl mx-auto">
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-red-600">Galeri</span>
           <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
             Dokumentasi Aktivitas
           </h2>
+          <p className="mt-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            Sejak 2005, Inti Dinamis mendampingi organisasi mengembangkan kekuatan yang paling menentukan keberhasilan bisnis: manusianya. Kami membantu organisasi mengubah potensi menjadi kapabilitas, kapabilitas menjadi kinerja, dan kinerja menjadi hasil yang nyata.
+          </p>
         </div>
 
         {/* Minimal Category Tabs */}

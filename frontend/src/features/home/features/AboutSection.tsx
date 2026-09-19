@@ -1,20 +1,22 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+
 export function AboutSection() {
   const stats = [
     {
-      value: "95%",
-      label: "Tingkat kepuasan klien dalam pendampingan organisasi & pelatihan",
-    },
-    {
       value: "20+",
-      label: "Tahun pengalaman dedikasi pengembangan Human Capital",
+      label:
+        "Tahun pengalaman dedikasi dalam pengembangan SDM & transformasi organisasi",
     },
     {
-      value: "500+",
-      label: "Klien korporasi lintas industri manufaktur, perbankan, & BUMN",
+      value: "100+",
+      label:
+        "Klien korporasi lintas sektor mempercayakan keunggulan kinerjanya",
     },
     {
-      value: "50k+",
-      label: "Peserta & eksekutif yang telah mengikuti program pengembangan",
+      value: "Ribuan",
+      label:
+        "Pemimpin, eksekutif, dan talenta kunci telah dikembangkan potensinya",
     },
   ];
 
@@ -29,8 +31,9 @@ export function AboutSection() {
           {/* Left Column: Pill / Dot Category Tag */}
           <div className="md:col-span-3 lg:col-span-2">
             <div className="inline-flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800 tracking-tight">
-              <span className="h-2 w-2 rounded-full bg-slate-950 shrink-0" />
-              <span>Tentang Inti Dinamis</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-red-600">
+                Tentang Inti Dinamis
+              </span>
             </div>
           </div>
 
@@ -47,29 +50,64 @@ export function AboutSection() {
             {/* Secondary / Supporting Paragraph (Proportionally Scaled) */}
             <p className="text-base sm:text-lg lg:text-xl font-normal text-slate-600 leading-relaxed max-w-4xl">
               Tujuan akhirnya adalah kinerja yang bergerak, organisasi yang
-              bertumbuh, dan hasil yang nyata. Pertanyaannya: sudahkah
-              organisasi Anda benar-benar memberdayakan manusia untuk
-              menghasilkan kinerja terbaiknya?
+              bertumbuh, dan hasil yang nyata. Maka pertanyaannya:
             </p>
+
+            {/* The Question & Resolution Box (Addressing the Question) */}
+            <div className="mt-6 sm:mt-8 p-6 sm:p-7 lg:p-8 rounded-2xl bg-slate-50 border border-slate-200/80 border-l-4 border-l-red-600 max-w-4xl shadow-2xs">
+              <p className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-slate-950 leading-snug">
+                “Sudahkah organisasi Anda benar-benar memberdayakan manusia
+                untuk menghasilkan kinerja terbaiknya?”
+              </p>
+
+              {/* <div className="mt-4 pt-4 border-t border-slate-200/70">
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+                  <strong className="font-semibold text-slate-900">
+                    Di sinilah Inti Dinamis hadir.
+                  </strong>{" "}
+                  Kami mendampingi para pemimpin dan organisasi menyelaraskan
+                  pengembangan manusia dengan sasaran strategis bisnis—memastikan setiap
+                  asesmen, pelatihan, coaching, dan konsultasi bermuara pada
+                  perubahan perilaku yang nyata serta peningkatan kinerja yang terukur.
+                </p>
+
+                <div className="mt-5 flex flex-wrap items-center gap-4">
+                  <Link
+                    href="/#produk-jasa"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-red-600 hover:text-red-700 transition-colors group"
+                  >
+                    <span>Lihat Produk & Jasa Kami</span>
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                  </Link>
+                  <span className="text-slate-300 hidden sm:inline">•</span>
+                  <Link
+                    href="/#kontak"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+                  >
+                    <span>Konsultasi Kebutuhan Organisasi</span>
+                  </Link>
+                </div>
+              </div> */}
+            </div>
+            <div className="mt-16 sm:mt-20 lg:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="border-l border-slate-200/90 pl-5 sm:pl-6 flex flex-col justify-start"
+                >
+                  <p className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-950">
+                    {stat.value}
+                  </p>
+                  <p className="mt-3 text-xs sm:text-sm text-slate-500 font-normal leading-relaxed">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Bottom Grid: 4 Metric Columns with Left Divider Lines */}
-        <div className="mt-16 sm:mt-20 lg:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="border-l border-slate-200/90 pl-5 sm:pl-6 flex flex-col justify-start"
-            >
-              <p className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-950">
-                {stat.value}
-              </p>
-              <p className="mt-3 text-xs sm:text-sm text-slate-500 font-normal leading-relaxed">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+        {/* Bottom Grid: 3 Metric Columns with Left Divider Lines */}
       </div>
     </section>
   );
