@@ -71,7 +71,7 @@ export function ContactSection() {
               <span className="text-slate-300 hidden sm:inline">•</span>
 
               <a
-                href="mailto:contact@intidinamis.com"
+                href="mailto:john.purba@gmail.com"
                 className="inline-flex items-center gap-1.5 hover:text-red-600 transition-colors"
               >
                 <Mail className="h-3.5 w-3.5 text-red-600" />
@@ -82,7 +82,7 @@ export function ContactSection() {
 
               <span className="inline-flex items-center gap-1.5">
                 <Phone className="h-3.5 w-3.5 text-red-600" />
-                <span>+62 811-855-212</span>
+                <span>+62-811-855-212</span>
               </span>
 
               <span className="text-slate-300 hidden sm:inline">•</span>

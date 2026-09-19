@@ -17,9 +17,10 @@ export function LandingFooter() {
               <IntiDinamisLogo size="md" />
             </Link>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">
-              PT Inti Dinamis adalah konsultan organisasi dan pengembangan SDM terpercaya sejak
-              2005. Mengembangkan Human Capital menjadi kontributor hebat melalui Performance
-              Coaching dan Modifikasi Perilaku.
+              PT Inti Dinamis adalah konsultan organisasi dan pengembangan SDM
+              terpercaya sejak 2005. Mengembangkan Human Capital menjadi
+              kontributor hebat melalui Performance Coaching dan Modifikasi
+              Perilaku.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 text-xs text-slate-500">
               <ShieldCheck className="h-4 w-4 text-red-500" />
@@ -38,7 +39,7 @@ export function LandingFooter() {
             </div>
             <div className="flex items-center justify-center md:justify-start gap-2 text-slate-400">
               <Mail className="h-4 w-4 text-red-500 shrink-0" />
-              <span>contact@intidinamis.com</span>
+              <span>john.purba@gmail.com</span>
             </div>
             <div className="pt-2">
               <a
@@ -55,9 +56,13 @@ export function LandingFooter() {
         </div>
 
         <div className="mt-10 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center sm:text-left">
-          <p>© {new Date().getFullYear()} PT Inti Dinamis. Seluruh hak cipta dilindungi.</p>
           <p>
-            Klik logo di atas untuk mengunjungi beranda profil resmi PT Inti Dinamis.
+            © {new Date().getFullYear()} PT Inti Dinamis. Seluruh hak cipta
+            dilindungi.
+          </p>
+          <p>
+            Klik logo di atas untuk mengunjungi beranda profil resmi PT Inti
+            Dinamis.
           </p>
         </div>
       </div>

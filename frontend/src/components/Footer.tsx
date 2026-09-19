@@ -1,11 +1,5 @@
 import Link from "next/link";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  ArrowRight,
-  ShieldCheck,
-} from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, ShieldCheck } from "lucide-react";
 import { IntiDinamisLogo } from "@/components/ui/IntiDinamisLogo";
 
 export function Footer() {
@@ -164,13 +158,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-red-500" />
-                <span className="text-slate-300">
-                  +62 (21) 555-0192 / 0811-8888-000
-                </span>
+                <span className="text-slate-300">+62-811-855-212</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-red-500" />
-                <span className="text-slate-300">contact@intidinamis.com</span>
+                <span className="text-slate-300">john.purba@gmail.com</span>
               </li>
             </ul>
 
