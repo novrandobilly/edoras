@@ -1,4 +1,5 @@
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
+import photoJohn from "@/assets/team/john.jpg";
 import { CheckCircle2, UserCheck } from "lucide-react";
 
 export function SpeakerBioSection() {
@@ -15,17 +16,19 @@ export function SpeakerBioSection() {
     <section id="pembicara" className="py-16 sm:py-24 bg-white border-b border-slate-100">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left: Speaker Photo Placeholder */}
+          {/* Left: Speaker Photo */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-sm rounded-3xl border border-slate-200 bg-slate-50 p-4 shadow-xl">
-              <ImagePlaceholder
-                title="John Arif Purba, ACC"
-                subtitle="Area Foto Resmi Pembicara (Rasio 3:4 / Portrait). Ganti dengan foto Coach John Arif Purba nantinya."
-                aspectRatio="portrait"
-                icon="team"
-                badge="Lead Executive Coach"
-                className="bg-white border-slate-300"
-              />
+              <div className="relative aspect-3/4 w-full overflow-hidden rounded-2xl bg-slate-100 border border-slate-200/80">
+                <Image
+                  src={photoJohn}
+                  alt="Coach John Arif Purba, ACC"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 400px"
+                  priority
+                  className="object-cover object-top"
+                />
+              </div>
               <div className="mt-4 text-center">
                 <p className="text-base font-bold text-slate-900">John Arif Purba, ACC</p>
                 <p className="text-xs text-slate-500">

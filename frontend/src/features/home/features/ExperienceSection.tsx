@@ -1,27 +1,69 @@
-import { Building2 } from "lucide-react";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import logoAstra from "@/assets/clients/astra-international-logo.webp";
+import logoAstraAgro from "@/assets/clients/astra-agro-lestari.jpg";
+import logoAdira from "@/assets/clients/adira-finance-logo.webp";
+import logoBcaFinance from "@/assets/clients/bca-finance-logo.webp";
+import logoDanone from "@/assets/clients/danone-logo.webp";
+import logoCharitas from "@/assets/clients/charitas-hospital-logo.webp";
+import logoVoksel from "@/assets/clients/voksel-logo.webp";
+import logoDbc from "@/assets/clients/dbc-logo.webp";
 
 export function ExperienceSection() {
   const clients = [
-    { name: "PT Astra International Tbk", category: "Otomotif & Konglomerasi" },
-    { name: "PT Astra Agro Lestari Tbk", category: "Agribisnis & Perkebunan" },
-    { name: "PT Adira Finance Tbk", category: "Lembaga Pembiayaan" },
-    { name: "Politeknik Manufaktur Astra", category: "Pendidikan Vokasi" },
-    { name: "Amway Indonesia", category: "Consumer Goods & Retail" },
-    { name: "PT Agra Tata Konstruksindo", category: "Konstruksi & Rekayasa" },
-    { name: "PT Armada Auto Tara", category: "Otomotif & Layanan" },
-    { name: "Air Putih Studio", category: "Arsitektur & Kreatif" },
+    {
+      name: "PT Astra International Tbk",
+      category: "Otomotif & Konglomerasi",
+      logo: logoAstra,
+    },
+    {
+      name: "PT Astra Agro Lestari Tbk",
+      category: "Agribisnis & Perkebunan",
+      logo: logoAstraAgro,
+      scaleClass: "scale-[1.5]",
+    },
+    {
+      name: "PT Adira Finance Tbk",
+      category: "Lembaga Pembiayaan",
+      logo: logoAdira,
+    },
+    {
+      name: "PT BCA Finance",
+      category: "Lembaga Pembiayaan",
+      logo: logoBcaFinance,
+      scaleClass: "scale-[4]",
+    },
+    {
+      name: "Danone Indonesia",
+      category: "Consumer Goods & Nutrisi",
+      logo: logoDanone,
+    },
+    {
+      name: "Charitas Hospital Group",
+      category: "Layanan Kesehatan & RS",
+      logo: logoCharitas,
+    },
+    {
+      name: "PT Voksel Electric Tbk",
+      category: "Manufaktur & Energi",
+      logo: logoVoksel,
+    },
+    {
+      name: "Djabesmen Co. (DBC)",
+      category: "Bahan Bangunan & Manufaktur",
+      logo: logoDbc,
+    },
   ];
 
   const industries = [
-    "Otomotif",
+    "Otomotif & Konglomerasi",
     "Pembiayaan & Finansial",
-    "Agribisnis",
-    "Manufaktur",
-    "Konstruksi",
-    "Transportasi & Logistik",
-    "Kesehatan",
-    "Pemerintahan & BUMN",
-    "Retail & Media",
+    "Agribisnis & Perkebunan",
+    "Consumer Goods & FMCG",
+    "Layanan Kesehatan",
+    "Manufaktur & Energi",
+    "Bahan Bangunan & Konstruksi",
+    "Pendidikan & Publik",
   ];
 
   return (
@@ -35,6 +77,9 @@ export function ExperienceSection() {
           <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
             Dipercaya oleh Pemimpin Industri
           </h2>
+          <p className="mt-3 text-sm sm:text-base text-slate-600">
+            Berbagai perusahaan multinasional, korporasi nasional, dan institusi terkemuka yang telah bermitra bersama PT Inti Dinamis.
+          </p>
         </div>
 
         {/* Client Cards Grid */}
@@ -42,16 +87,29 @@ export function ExperienceSection() {
           {clients.map((client) => (
             <div
               key={client.name}
-              className="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xs hover:border-red-200 hover:shadow-md transition-all text-center group"
+              className="flex flex-col justify-between items-center rounded-2xl border border-slate-200/90 bg-white p-5 shadow-2xs hover:border-red-200 hover:shadow-md transition-all text-center group"
             >
-              <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50 text-slate-400 group-hover:text-red-600 group-hover:bg-red-50 transition-colors">
-                <Building2 className="h-5 w-5" />
+              {/* Client Logo Container */}
+              <div className="flex h-20 w-full items-center justify-center p-2 overflow-hidden">
+                <div className="flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                  <div className={cn("flex items-center justify-center", client.scaleClass)}>
+                    <Image
+                      src={client.logo}
+                      alt={`Logo ${client.name}`}
+                      className="max-h-14 max-w-[85%] w-auto object-contain"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="mt-4">
-                <h4 className="text-sm font-bold text-slate-900 group-hover:text-red-600 transition-colors line-clamp-2">
+
+              {/* Client Info */}
+              <div className="mt-3 w-full border-t border-slate-100 pt-3">
+                <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-red-600 transition-colors line-clamp-1">
                   {client.name}
                 </h4>
-                <p className="mt-1 text-[11px] font-medium text-slate-500">{client.category}</p>
+                <p className="mt-1 text-[11px] font-medium text-slate-500 line-clamp-1">
+                  {client.category}
+                </p>
               </div>
             </div>
           ))}

@@ -1,4 +1,7 @@
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import Image from "next/image";
+import photoJohn from "@/assets/team/john.jpg";
+import photoGaby from "@/assets/team/gaby.jpg";
+import photoRisman from "@/assets/team/risman.jpg";
 
 export function TeamSection() {
   const members = [
@@ -8,6 +11,7 @@ export function TeamSection() {
       summary:
         "Spesialis strategi sistem SDM terintegrasi dan modifikasi perilaku berbasis NLP & coaching berstandar internasional.",
       credentials: ["Psikolog", "ACC Coach (ICF)", "Master NLP"],
+      photo: photoJohn,
     },
     {
       name: "Gaby Anniwati",
@@ -15,6 +19,7 @@ export function TeamSection() {
       summary:
         "Spesialis talent recruitment, asesmen kompetensi terintegrasi, dan coaching kepemimpinan eksekutif.",
       credentials: ["Psikolog", "Certified Coach", "Hypnotherapist"],
+      photo: photoGaby,
     },
     {
       name: "Risman Purba",
@@ -22,6 +27,7 @@ export function TeamSection() {
       summary:
         "Praktisi modifikasi perilaku dan kreator konsep BrainPower® untuk akselerasi produktivitas serta ketahanan mental.",
       credentials: ["BrainPower® Creator", "Behavioral Trainer", "Certified Coach"],
+      photo: photoRisman,
     },
   ];
 
@@ -46,14 +52,16 @@ export function TeamSection() {
               className="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 shadow-2xs hover:border-red-200 hover:shadow-lg transition-all group"
             >
               <div>
-                {/* Photo Placeholder Frame */}
-                <ImagePlaceholder
-                  title={member.name}
-                  subtitle="Foto Profil Konsultan"
-                  aspectRatio="tall"
-                  icon="team"
-                  className="group-hover:border-red-300 transition-colors"
-                />
+                {/* Photo Frame */}
+                <div className="relative aspect-3/4 w-full overflow-hidden rounded-xl bg-slate-100 mb-5 border border-slate-200/80 group-hover:border-red-200 transition-colors">
+                  <Image
+                    src={member.photo}
+                    alt={`Foto ${member.name}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 350px"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
                 <h3 className="mt-4 text-base sm:text-lg font-bold text-slate-950 group-hover:text-red-600 transition-colors">
                   {member.name}
