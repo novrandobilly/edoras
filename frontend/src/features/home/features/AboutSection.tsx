@@ -1,53 +1,74 @@
-import { Quote } from "lucide-react";
-
 export function AboutSection() {
+  const stats = [
+    {
+      value: "95%",
+      label: "Tingkat kepuasan klien dalam pendampingan organisasi & pelatihan",
+    },
+    {
+      value: "20+",
+      label: "Tahun pengalaman dedikasi pengembangan Human Capital",
+    },
+    {
+      value: "500+",
+      label: "Klien korporasi lintas industri manufaktur, perbankan, & BUMN",
+    },
+    {
+      value: "50k+",
+      label: "Peserta & eksekutif yang telah mengikuti program pengembangan",
+    },
+  ];
+
   return (
-    <section id="tentang-kami" className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          {/* Left Column: Clear Single Headline & Purpose (7 cols) */}
-          <div className="lg:col-span-7 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-red-600">
-              Tentang Kami
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950 leading-snug">
-              Partner Anda Menuju Organisasi yang Lebih Baik
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              Didirikan tahun 2005, Inti Dinamis mendampingi perusahaan mengoptimalkan Human Capital
-              sebagai daya saing utama untuk menjamin tercapainya visi organisasi.
-            </p>
-            <div className="pt-1">
-              <div className="inline-flex items-center gap-2 rounded-xl bg-red-50/80 border border-red-100 px-3.5 py-2 text-xs text-slate-800">
-                <span className="font-bold text-red-700 uppercase tracking-wide text-[10px]">
-                  Misi:
-                </span>
-                <span className="font-semibold text-slate-900">
-                  &ldquo;Meningkatkan kualitas Human Capital menjadi kontributor hebat.&rdquo;
-                </span>
-              </div>
+    <section
+      id="tentang-kami"
+      className="relative z-20 -mt-10 sm:-mt-14 lg:-mt-18 rounded-t-[36px] sm:rounded-t-[48px] lg:rounded-t-[56px] bg-white pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-28 border-t border-slate-100 shadow-[0_-16px_40px_rgba(0,0,0,0.08)]"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Top Grid: Label on left + Large Editorial Statement on right */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-start">
+          {/* Left Column: Pill / Dot Category Tag */}
+          <div className="md:col-span-3 lg:col-span-2">
+            <div className="inline-flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-slate-800 tracking-tight">
+              <span className="h-2 w-2 rounded-full bg-slate-950 shrink-0" />
+              <span>Tentang Inti Dinamis</span>
             </div>
           </div>
 
-          {/* Right Column: Compact Quote Box (5 cols) */}
-          <div className="lg:col-span-5">
-            <div className="relative rounded-2xl border border-slate-200/90 bg-white p-6 shadow-2xs">
-              <Quote className="h-5 w-5 text-red-600 mb-2.5 opacity-80" />
-              <blockquote className="text-base sm:text-lg font-semibold text-slate-900 italic leading-snug">
-                &ldquo;Hasil ditentukan tindakan.
-                <br />
-                Tindakan ditentukan pikiran.
-                <br />
-                Pikiran ditentukan keyakinan.&rdquo;
-              </blockquote>
-              <div className="mt-4 pt-3 border-t border-slate-100">
-                <p className="text-xs font-bold text-slate-900">Coach John Arif Purba, ACC</p>
-                <p className="text-[11px] text-slate-500 font-medium">
-                  Psychologist • Coach ICF • Master NLP
-                </p>
-              </div>
-            </div>
+          {/* Right Column: Hierarchical Editorial Statement */}
+          <div className="md:col-span-9 lg:col-span-10">
+            {/* Primary / Lead Paragraph (Larger) */}
+            <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-medium tracking-tight text-slate-900 leading-[1.4] mb-5 sm:mb-6">
+              Di Inti Dinamis, kami membantu organisasi menemukan dan
+              mengembangkan potensi manusia menjadi kemampuan yang nyata,
+              perilaku yang efektif, dan kontribusi yang berdampak. Sebab
+              memberdayakan manusia bukanlah tujuan akhir.
+            </p>
+
+            {/* Secondary / Supporting Paragraph (Proportionally Scaled) */}
+            <p className="text-base sm:text-lg lg:text-xl font-normal text-slate-600 leading-relaxed max-w-4xl">
+              Tujuan akhirnya adalah kinerja yang bergerak, organisasi yang
+              bertumbuh, dan hasil yang nyata. Pertanyaannya: sudahkah
+              organisasi Anda benar-benar memberdayakan manusia untuk
+              menghasilkan kinerja terbaiknya?
+            </p>
           </div>
+        </div>
+
+        {/* Bottom Grid: 4 Metric Columns with Left Divider Lines */}
+        <div className="mt-16 sm:mt-20 lg:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="border-l border-slate-200/90 pl-5 sm:pl-6 flex flex-col justify-start"
+            >
+              <p className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-950">
+                {stat.value}
+              </p>
+              <p className="mt-3 text-xs sm:text-sm text-slate-500 font-normal leading-relaxed">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
