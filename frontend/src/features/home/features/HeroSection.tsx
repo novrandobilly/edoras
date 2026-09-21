@@ -27,9 +27,11 @@ export function HeroSection() {
           <div className="max-w-3xl">
             {/* Primary Headline - Strictly 2 lines */}
             <h1 className="text-[clamp(1.25rem,5.7vw,3.75rem)] font-extrabold tracking-tight text-white leading-[1.15] drop-shadow-sm">
-              <span className="block whitespace-nowrap">Memberdayakan manusia,</span>
+              <span className="block whitespace-nowrap">
+                Memberdayakan manusia,
+              </span>
               <span className="block whitespace-nowrap bg-linear-to-r from-red-500 via-red-600 to-rose-500 bg-clip-text text-transparent">
-                meningkatkan kinerja
+                meningkatkan kinerja.
               </span>
             </h1>
 
