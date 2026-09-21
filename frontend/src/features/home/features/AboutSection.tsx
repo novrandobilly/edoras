@@ -38,10 +38,10 @@ export function AboutSection() {
           <div className="md:col-span-9 lg:col-span-10">
             {/* Primary / Lead Paragraph (Larger) */}
             <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-medium tracking-tight text-slate-900 leading-[1.4] mb-5 sm:mb-6">
-              Di Inti Dinamis, kami membantu organisasi menemukan dan
-              mengembangkan potensi manusia menjadi kemampuan yang nyata,
-              perilaku yang efektif, dan kontribusi yang berdampak. Sebab
-              memberdayakan manusia bukanlah tujuan akhir.
+              Kami membantu organisasi menemukan dan mengembangkan potensi
+              manusia menjadi kemampuan yang nyata, perilaku yang efektif, dan
+              kontribusi yang berdampak. Sebab memberdayakan manusia bukanlah
+              tujuan akhir.
             </p>
 
             {/* Secondary / Supporting Paragraph (Proportionally Scaled) */}
