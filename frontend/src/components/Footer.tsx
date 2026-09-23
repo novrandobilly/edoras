@@ -121,14 +121,6 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#recruitment-executive-search"
-                  className="hover:text-red-400 transition-colors"
-                >
-                  Recruitment & Executive Search
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/#brainpower"
                   className="hover:text-red-400 transition-colors"
                 >
@@ -137,10 +129,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#event-organizing"
+                  href="/#leadership-adventure"
                   className="hover:text-red-400 transition-colors"
                 >
-                  Event Organizing
+                  Leadership Adventure
                 </Link>
               </li>
             </ul>
