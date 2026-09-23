@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PT Inti Dinamis | Konsultan Pengembangan SDM, Training & Asesmen Organisasi",
+  title: "Inti Dinamis | Training - Coaching - Assessment - HR & OD Consulting",
   description:
     "PT Inti Dinamis - Mitra konsultan SDM dan organisasi sejak 2005. Mengembangkan Human Capital menjadi kontributor hebat melalui Performance Coaching, Pelatihan Modifikasi Perilaku BrainPower®, dan Asesmen Psikologis.",
   keywords: [

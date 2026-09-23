@@ -14,7 +14,7 @@ export function ServicesSection() {
   const services = [
     {
       id: "leadership-coaching",
-      title: "Performance & Leadership Coaching",
+      title: "Leadership Coaching",
       icon: Target,
       summary:
         "Pendampingan berbasis standar ICF untuk membuka potensi kepemimpinan dan mengakselerasi performa eksekutif.",
@@ -41,13 +41,6 @@ export function ServicesSection() {
         "Pemeriksaan psikologis komprehensif dan assessment center untuk pemetaan potensi, promosi, dan suksesi.",
     },
     {
-      id: "recruitment-executive-search",
-      title: "Recruitment & Executive Search",
-      icon: UserCheck,
-      summary:
-        "Penyediaan talenta profesional dan eksekutif yang selaras secara kualifikasi dan budaya kerja.",
-    },
-    {
       id: "brainpower",
       title: "BrainPower®",
       icon: Zap,
@@ -55,8 +48,8 @@ export function ServicesSection() {
         "Modifikasi perilaku dan pemrograman pikiran manusia untuk mendongkrak ketahanan mental dan produktivitas.",
     },
     {
-      id: "event-organizing",
-      title: "Event Organizing",
+      id: "leadership-adventure",
+      title: "Leadership Adventure",
       icon: CalendarDays,
       summary:
         "Penyelenggaraan event korporasi, seminar besar, workshop eksekutif, dan gathering secara profesional.",
@@ -75,7 +68,7 @@ export function ServicesSection() {
             Produk & Jasa
           </span>
           <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
-            Solusi Pengembangan Sumber Daya Manusia
+            Solusi Pemberdayaan Sumber Daya Manusia
           </h2>
         </div>
 
