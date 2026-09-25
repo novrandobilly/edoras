@@ -1,5 +1,5 @@
 import Image from "next/image";
-import photoJohn from "@/assets/team/john.jpg";
+import photoJohn from "@/assets/team/John.webp";
 import { CheckCircle2, UserCheck } from "lucide-react";
 
 export function SpeakerBioSection() {
