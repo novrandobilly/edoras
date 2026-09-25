@@ -36,7 +36,7 @@ export function HeroSection() {
             </h1>
 
             {/* Subtitle / Philosophy Description */}
-            <p className="mt-5 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg text-slate-300 font-normal leading-relaxed">
+            <p className="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg lg:text-xl text-slate-300 font-normal leading-relaxed">
               Dibalik setiap angka kinerja, ada manusia yang berpikir,
               memutuskan, berkolaborasi, dan bertindak. Jika ingin kinerja naik,
               berdayakan manusia.
