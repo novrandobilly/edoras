@@ -1,7 +1,7 @@
 import Image from "next/image";
-import photoJohn from "@/assets/team/john.jpg";
-import photoGaby from "@/assets/team/gaby.jpg";
-import photoRisman from "@/assets/team/risman.jpg";
+import photoJohn from "@/assets/team/John.webp";
+import photoGaby from "@/assets/team/Gaby.webp";
+import photoRisman from "@/assets/team/Risman.webp";
 
 export function TeamSection() {
   const members = [
