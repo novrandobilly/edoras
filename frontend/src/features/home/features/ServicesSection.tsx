@@ -15,43 +15,37 @@ export function ServicesSection() {
       id: "leadership-coaching",
       title: "Leadership Coaching",
       icon: Compass,
-      summary:
-        "Pendampingan berbasis standar ICF untuk membuka potensi kepemimpinan dan mengakselerasi performa eksekutif.",
+      summary: `Mengembangkan pemimpin menjadi lebih efektif dalam mengambil keputusan, menggerakkan tim, dan mencapai target melalui coaching terstruktur, powerful questioning, reflection, action planning, dan follow-up, sehingga berdampak pada peningkatan kinerja individu dan tim.`,
     },
     {
       id: "training-sdm",
       title: "Training (Pelatihan & Pengembangan SDM)",
       icon: GraduationCap,
-      summary:
-        "Program in-house dan outbound untuk memperkuat kompetensi teknis, komunikasi, dan sinergi tim.",
-    },
-    {
-      id: "hr-od-consulting",
-      title: "HR & OD Consulting",
-      icon: Workflow,
-      summary:
-        "Perancangan sistem manajemen SDM dan struktur organisasi yang selaras dengan visi korporasi.",
+      summary: `Mengubah kompetensi menjadi kinerja melalui experiential learning, case study, simulation, group discussion, practice, dan action learning, sehingga peserta mampu menerapkan pembelajaran untuk meningkatkan produktivitas dan hasil kerja.`,
     },
     {
       id: "potential-assessment",
       title: "Potential Assessment",
       icon: ClipboardCheck,
-      summary:
-        "Pemeriksaan psikologis komprehensif dan assessment center untuk pemetaan potensi, promosi, dan suksesi.",
+      summary: `Mengungkap potensi, kekuatan, dan area pengembangan individu melalui psychometric assessment, competency-based assessment, interview, observation, dan assessment tools, untuk mendukung penempatan, pengembangan, dan succession talent secara lebih tepat.`,
     },
     {
-      id: "brainpower",
-      title: "BrainPower®",
-      icon: Brain,
-      summary:
-        "Modifikasi perilaku dan pemrograman pikiran manusia untuk mendongkrak ketahanan mental dan produktivitas.",
+      id: "hr-od-consulting",
+      title: "HR & OD Consulting",
+      icon: Workflow,
+      summary: `Menyelaraskan strategi people dan organisasi dengan kebutuhan bisnis melalui diagnostic, data analysis, competency mapping, organizational assessment, process review, dan strategic intervention, untuk meningkatkan efektivitas organisasi dan produktivitas.`,
     },
     {
       id: "leadership-adventure",
       title: "Leadership Adventure",
       icon: Flag,
-      summary:
-        "Penyelenggaraan event korporasi, seminar besar, workshop eksekutif, dan gathering secara profesional.",
+      summary: `Mengembangkan leadership dan teamwork melalui experiential learning, outdoor challenges, team games, problem solving, simulation, dan structured reflection, sehingga peserta mampu menerapkan pembelajaran dalam menghadapi tantangan dan mencapai target bisnis.`,
+    },
+    {
+      id: "brainpower",
+      title: "BrainPower®",
+      icon: Brain,
+      summary: `Mengasah kemampuan berpikir kritis, kreatif, dan sistematis melalui brain-based learning, creative thinking, critical thinking, problem solving, decision-making exercises, dan simulation, sehingga individu mampu menghasilkan solusi lebih cepat, keputusan lebih tepat, dan inovasi yang bernilai bagi bisnis.`,
     },
   ];
 
