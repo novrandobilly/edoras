@@ -70,7 +70,7 @@ export function ExperienceSection() {
         </div>
 
         {/* Industry Focus Pills */}
-        <div className="mt-12 pt-8 border-t border-slate-200 text-center">
+        {/* <div className="mt-12 pt-8 border-t border-slate-200 text-center">
           <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3.5">
             Cakupan Sektor Industri:
           </p>
@@ -84,7 +84,7 @@ export function ExperienceSection() {
               </span>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

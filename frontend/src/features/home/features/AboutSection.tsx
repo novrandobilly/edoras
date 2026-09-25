@@ -69,7 +69,7 @@ export function AboutSection() {
                   <p className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-950">
                     {stat.value}
                   </p>
-                  <p className="mt-3 text-xs sm:text-sm text-slate-500 font-normal leading-relaxed">
+                  <p className="mt-3 text-sm sm:text-base text-slate-500 font-normal leading-relaxed">
                     {stat.label}
                   </p>
                 </div>

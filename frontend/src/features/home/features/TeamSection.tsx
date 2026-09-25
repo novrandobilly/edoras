@@ -15,7 +15,8 @@ export function TeamSection() {
     },
     {
       name: "Gaby Anniwati",
-      title: "Psychologist, Certified Professional Coach, Clinical Hypnotherapist",
+      title:
+        "Psychologist, Certified Professional Coach, Clinical Hypnotherapist",
       summary:
         "Spesialis talent recruitment, asesmen kompetensi terintegrasi, dan coaching kepemimpinan eksekutif.",
       credentials: ["Psikolog", "Certified Coach", "Hypnotherapist"],
@@ -26,13 +27,20 @@ export function TeamSection() {
       title: "BrainPower® Trainer, Certified Professional Coach",
       summary:
         "Praktisi modifikasi perilaku dan kreator konsep BrainPower® untuk akselerasi produktivitas serta ketahanan mental.",
-      credentials: ["BrainPower® Creator", "Behavioral Trainer", "Certified Coach"],
+      credentials: [
+        "BrainPower® Creator",
+        "Behavioral Trainer",
+        "Certified Coach",
+      ],
       photo: photoRisman,
     },
   ];
 
   return (
-    <section id="tim-ahli" className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80">
+    <section
+      id="tim-ahli"
+      className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section Header - Clean without redundant description */}
         <div className="text-center max-w-2xl mx-auto">
@@ -66,10 +74,10 @@ export function TeamSection() {
                 <h3 className="mt-4 text-base sm:text-lg font-bold text-slate-950 group-hover:text-red-600 transition-colors">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-xs font-semibold text-slate-500 leading-snug">
+                <p className="mt-1 text-sm font-normal italic text-slate-500 leading-snug">
                   {member.title}
                 </p>
-                <p className="mt-2.5 text-xs text-slate-600 leading-relaxed font-normal">
+                <p className="mt-2.5 text-base text-slate-600 leading-relaxed font-normal">
                   {member.summary}
                 </p>
               </div>

@@ -61,7 +61,10 @@ export function ServicesSection() {
             Produk & Jasa
           </span>
           <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
-            Solusi Pemberdayaan Sumber Daya Manusia
+            Solusi Pemberdayaan
+          </h2>
+          <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
+            Sumber Daya Manusia
           </h2>
         </div>
 
@@ -84,7 +87,7 @@ export function ServicesSection() {
                     {service.title}
                   </h3>
 
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
                     {service.summary}
                   </p>
                 </div>
