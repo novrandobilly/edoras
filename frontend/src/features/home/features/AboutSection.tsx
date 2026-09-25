@@ -36,25 +36,28 @@ export function AboutSection() {
 
           {/* Right Column: Hierarchical Editorial Statement */}
           <div className="md:col-span-9 lg:col-span-10">
-            {/* Primary / Lead Paragraph (Larger) */}
-            <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-medium tracking-tight text-slate-900 leading-[1.4] mb-5 sm:mb-6">
+            {/* Primary / Lead Paragraph */}
+            <p className="text-lg sm:text-xl lg:text-2xl font-medium tracking-tight text-slate-900 leading-[1.4] mb-5 sm:mb-6">
               Di Inti Dinamis, kami membantu organisasi memberdayakan manusia
               dengan menemukan dan mengembangkan potensi manusia menjadi
               kemampuan yang nyata, perilaku yang efektif, dan kontribusi yang
               berdampak.
             </p>
 
-            {/* Secondary / Supporting Paragraph (Proportionally Scaled) */}
-            <p className="text-base sm:text-lg lg:text-xl font-normal text-slate-600 leading-relaxed max-w-4xl">
+            {/* Secondary / Supporting Paragraph */}
+            <p className="text-lg sm:text-xl lg:text-2xl font-normal leading-relaxed max-w-4xl">
               Memberdayakan manusia menjadi awal dari kinerja yang bergerak,
               organisasi yang bertumbuh, dan hasil yang nyata.
             </p>
 
             {/* The Question & Resolution Box (Addressing the Question) */}
             <div className="mt-6 sm:mt-8 p-6 sm:p-7 lg:p-8 rounded-2xl bg-slate-50 border border-slate-200/80 border-l-4 border-l-red-600 max-w-4xl shadow-2xs">
+              <p className="text-lg sm:text-xl lg:text-2xl tracking-tight text-slate-950 leading-snug mb-3 sm:mb-4">
+                Pertanyaannya:
+              </p>
               <p className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-slate-950 leading-snug">
-                Pertanyaannya: sudahkah organisasi Anda benar-benar
-                memberdayakan manusia untuk menghasilkan kinerja terbaiknya?
+                Sudahkah organisasi Anda benar-benar memberdayakan manusia untuk
+                menghasilkan kinerja terbaiknya?
               </p>
             </div>
             <div className="mt-16 sm:mt-20 lg:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14">
