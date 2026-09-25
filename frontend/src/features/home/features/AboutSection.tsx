@@ -38,53 +38,24 @@ export function AboutSection() {
           <div className="md:col-span-9 lg:col-span-10">
             {/* Primary / Lead Paragraph (Larger) */}
             <p className="text-xl sm:text-2xl lg:text-[1.75rem] font-medium tracking-tight text-slate-900 leading-[1.4] mb-5 sm:mb-6">
-              Kami membantu organisasi menemukan dan mengembangkan potensi
-              manusia menjadi kemampuan yang nyata, perilaku yang efektif, dan
-              kontribusi yang berdampak. Sebab memberdayakan manusia bukanlah
-              tujuan akhir.
+              Di Inti Dinamis, kami membantu organisasi memberdayakan manusia
+              dengan menemukan dan mengembangkan potensi manusia menjadi
+              kemampuan yang nyata, perilaku yang efektif, dan kontribusi yang
+              berdampak.
             </p>
 
             {/* Secondary / Supporting Paragraph (Proportionally Scaled) */}
             <p className="text-base sm:text-lg lg:text-xl font-normal text-slate-600 leading-relaxed max-w-4xl">
-              Tujuan akhirnya adalah kinerja yang bergerak, organisasi yang
-              bertumbuh, dan hasil yang nyata. Maka pertanyaannya:
+              Memberdayakan manusia menjadi awal dari kinerja yang bergerak,
+              organisasi yang bertumbuh, dan hasil yang nyata.
             </p>
 
             {/* The Question & Resolution Box (Addressing the Question) */}
             <div className="mt-6 sm:mt-8 p-6 sm:p-7 lg:p-8 rounded-2xl bg-slate-50 border border-slate-200/80 border-l-4 border-l-red-600 max-w-4xl shadow-2xs">
               <p className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-slate-950 leading-snug">
-                “Sudahkah organisasi Anda benar-benar memberdayakan manusia
-                untuk menghasilkan kinerja terbaiknya?”
+                Pertanyaannya: sudahkah organisasi Anda benar-benar
+                memberdayakan manusia untuk menghasilkan kinerja terbaiknya?
               </p>
-
-              {/* <div className="mt-4 pt-4 border-t border-slate-200/70">
-                <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-                  <strong className="font-semibold text-slate-900">
-                    Di sinilah Inti Dinamis hadir.
-                  </strong>{" "}
-                  Kami mendampingi para pemimpin dan organisasi menyelaraskan
-                  pengembangan manusia dengan sasaran strategis bisnis—memastikan setiap
-                  asesmen, pelatihan, coaching, dan konsultasi bermuara pada
-                  perubahan perilaku yang nyata serta peningkatan kinerja yang terukur.
-                </p>
-
-                <div className="mt-5 flex flex-wrap items-center gap-4">
-                  <Link
-                    href="/#produk-jasa"
-                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-red-600 hover:text-red-700 transition-colors group"
-                  >
-                    <span>Lihat Produk & Jasa Kami</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                  </Link>
-                  <span className="text-slate-300 hidden sm:inline">•</span>
-                  <Link
-                    href="/#kontak"
-                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
-                  >
-                    <span>Konsultasi Kebutuhan Organisasi</span>
-                  </Link>
-                </div>
-              </div> */}
             </div>
             <div className="mt-16 sm:mt-20 lg:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 lg:gap-14">
               {stats.map((stat, index) => (
