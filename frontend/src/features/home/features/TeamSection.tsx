@@ -1,37 +1,83 @@
+import React from "react";
 import Image from "next/image";
 import photoJohn from "@/assets/team/John.webp";
 import photoGaby from "@/assets/team/Gaby.webp";
 import photoRisman from "@/assets/team/Risman.webp";
 
+interface TeamMember {
+  name: string;
+  title: string;
+  focus: string;
+  summary: React.ReactNode;
+  credentials: string[];
+  photo: typeof photoJohn;
+}
+
 export function TeamSection() {
-  const members = [
+  const members: TeamMember[] = [
     {
       name: "John Arif Purba, ACC",
-      title: "Psychologist, Associate Certified Coach, Master NLP Practitioner",
-      summary:
-        "Spesialis strategi sistem SDM terintegrasi dan modifikasi perilaku berbasis NLP & coaching berstandar internasional.",
-      credentials: ["Psikolog", "ACC Coach (ICF)", "Master NLP"],
+      title:
+        "Psychologist | Leadership Coach | Master Trainer | Master NLP Practitioner",
+      focus: "Human Capital & Leadership Strategy",
+      summary: (
+        <>
+          Berpengalaman mendampingi organisasi dalam pengembangan strategi SDM
+          terintegrasi, leadership, coaching, dan behavioral transformation
+          untuk membantu membangun{" "}
+          <strong className="font-semibold text-slate-900">
+            pemimpin yang mampu menghasilkan kinerja melalui people
+          </strong>
+          .
+        </>
+      ),
+      credentials: [
+        "Psychologist",
+        "Leadership Coach",
+        "Master Trainer",
+        "Master NLP Practitioner",
+      ],
       photo: photoJohn,
     },
     {
       name: "Gaby Anniwati",
-      title:
-        "Psychologist, Certified Professional Coach, Clinical Hypnotherapist",
-      summary:
-        "Spesialis talent recruitment, asesmen kompetensi terintegrasi, dan coaching kepemimpinan eksekutif.",
-      credentials: ["Psikolog", "Certified Coach", "Hypnotherapist"],
+      title: "Psychologist | Professional Coach | Clinical Hypnotherapist",
+      focus: "Talent, Assessment & Executive Development",
+      summary: (
+        <>
+          Berpengalaman membantu organisasi dalam talent recruitment, integrated
+          competency assessment, executive coaching, dan leadership development
+          untuk{" "}
+          <strong className="font-semibold text-slate-900">
+            menemukan, memetakan, dan mengembangkan talenta secara optimal
+          </strong>
+          .
+        </>
+      ),
+      credentials: [
+        "Psychologist",
+        "Professional Coach",
+        "Clinical Hypnotherapist",
+      ],
       photo: photoGaby,
     },
     {
       name: "Risman Purba",
-      title: "BrainPower® Trainer, Certified Professional Coach",
-      summary:
-        "Praktisi modifikasi perilaku dan kreator konsep BrainPower® untuk akselerasi produktivitas serta ketahanan mental.",
-      credentials: [
-        "BrainPower® Creator",
-        "Behavioral Trainer",
-        "Certified Coach",
-      ],
+      title: "Professional Coach | BrainPower® Trainer",
+      focus: "Behavior, Productivity & Mental Resilience",
+      summary: (
+        <>
+          Berpengalaman dalam behavioral transformation, productivity
+          enhancement, dan mental resilience dengan menerapkan pendekatan{" "}
+          <strong className="font-semibold text-slate-900">BrainPower®</strong>{" "}
+          untuk membantu individu dan organisasi{" "}
+          <strong className="font-semibold text-slate-900">
+            mengubah potensi menjadi performa nyata
+          </strong>
+          .
+        </>
+      ),
+      credentials: ["Professional Coach", "BrainPower® Trainer"],
       photo: photoRisman,
     },
   ];
@@ -41,19 +87,42 @@ export function TeamSection() {
       id="tim-ahli"
       className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header - Clean without redundant description */}
-        <div className="text-center max-w-2xl mx-auto">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto">
           <span className="text-xs font-bold uppercase tracking-widest text-red-600">
             Tim Ahli
           </span>
-          <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
-            Kenali Partner Anda
+          <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-950">
+            Integrated Expertise for People, Leadership &amp; Performance
           </h2>
+          <div className="mt-4 space-y-2.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            <p>
+              Kami menghadirkan tim praktisi dengan keahlian yang saling
+              melengkapi dalam{" "}
+              <p>
+                <strong className="font-semibold text-slate-900">
+                  Human Capital, Leadership, Talent, Coaching, dan Behavioral
+                  Transformation
+                </strong>
+                .
+              </p>
+            </p>
+            <p>
+              Dengan memadukan perspektif{" "}
+              <strong className="font-semibold text-slate-900">
+                Psikologi, Coaching, NLP, Assessment, dan Behavioral Science
+              </strong>
+              , kami membantu organisasi membangun strategi pemberdayaan sumber
+              daya manusia yang lebih kuat, mengembangkan pemimpin yang efektif,
+              serta mendorong perubahan perilaku yang berdampak pada kinerja dan
+              kesinambungan pertumbuhan organisasi.
+            </p>
+          </div>
         </div>
 
         {/* Team Cards Grid (3 Columns) */}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {members.map((member) => (
             <div
               key={member.name}
@@ -71,19 +140,25 @@ export function TeamSection() {
                   />
                 </div>
 
-                <h3 className="mt-4 text-base sm:text-lg font-bold text-slate-950 group-hover:text-red-600 transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-slate-950 group-hover:text-red-600 transition-colors">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-sm font-normal italic text-slate-500 leading-snug">
+                <p className="mt-1 text-xs sm:text-sm font-normal italic text-slate-500 leading-snug">
                   {member.title}
                 </p>
-                <p className="mt-2.5 text-base text-slate-600 leading-relaxed font-normal">
-                  {member.summary}
-                </p>
+
+                <div className="mt-4 pt-3.5 border-t border-slate-100">
+                  <h4 className="text-sm font-bold text-slate-900 tracking-tight">
+                    {member.focus}
+                  </h4>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed font-normal">
+                    {member.summary}
+                  </p>
+                </div>
               </div>
 
               {/* Badges */}
-              <div className="mt-4 pt-3 border-t border-slate-100 flex flex-wrap gap-1.5">
+              <div className="mt-5 pt-3.5 border-t border-slate-100 flex flex-wrap gap-1.5">
                 {member.credentials.map((badge) => (
                   <span
                     key={badge}
