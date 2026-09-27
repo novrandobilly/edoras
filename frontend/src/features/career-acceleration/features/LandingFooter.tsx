@@ -43,7 +43,7 @@ export function LandingFooter() {
             </div>
             <div className="pt-2">
               <a
-                href="https://wa.me/628118888000?text=Halo%20Admin%20Inti%20Dinamis,%20saya%20ingin%20bertanya%20mengenai%20seminar%20Career%20Acceleration"
+                href="https://wa.me/62811855212?text=Halo%20Admin%20Inti%20Dinamis,%20saya%20ingin%20bertanya%20mengenai%20seminar%20Career%20Acceleration"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-emerald-600/90 hover:bg-emerald-600 px-4 py-2 text-xs font-bold text-white transition-colors"

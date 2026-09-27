@@ -19,12 +19,15 @@ export function QuickContactWidget() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    "Halo PT Inti Dinamis, saya ingin berkonsultasi mengenai kebutuhan pelatihan dan pengembangan SDM di perusahaan kami."
+    "Halo PT Inti Dinamis, saya ingin berkonsultasi mengenai kebutuhan pelatihan dan pengembangan SDM di perusahaan kami.",
   );
-  const whatsappUrl = `https://wa.me/628118888000?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/62811855212?text=${whatsappMessage}`;
 
   return (
-    <aside aria-label="Akses Kontak Cepat" className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 select-none">
+    <aside
+      aria-label="Akses Kontak Cepat"
+      className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 select-none"
+    >
       {/* Scroll to top button */}
       {showBackToTop && (
         <button

@@ -46,7 +46,7 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
       } catch (err: unknown) {
         console.warn(
           "PocketBase submission note: running fallback or local mock if needed.",
-          err
+          err,
         );
         if (process.env.NODE_ENV === "development") {
           return { id: "mock-id-" + Date.now(), ...data };
@@ -60,7 +60,7 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -95,7 +95,10 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
   ];
 
   return (
-    <section id="daftar" className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200/80">
+    <section
+      id="daftar"
+      className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200/80"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left: Resolusi & Turning Point Summary (5 cols) */}
@@ -109,8 +112,9 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                 Saatnya Mengambil Kendali Atas Masa Depan Karir Anda
               </h2>
               <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-                Keputusan Anda hari ini akan menentukan posisi Anda 1 hingga 3 tahun ke depan.
-                Amankan kursi Anda sekarang dan bersiaplah melompat ke level kepemimpinan berikutnya.
+                Keputusan Anda hari ini akan menentukan posisi Anda 1 hingga 3
+                tahun ke depan. Amankan kursi Anda sekarang dan bersiaplah
+                melompat ke level kepemimpinan berikutnya.
               </p>
             </div>
 
@@ -157,7 +161,9 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
               <div className="mt-3 space-y-2 text-slate-600">
                 <div className="flex justify-between">
                   <span>Investasi Kelas Normal</span>
-                  <span className="line-through text-slate-400">Rp 750.000</span>
+                  <span className="line-through text-slate-400">
+                    Rp 750.000
+                  </span>
                 </div>
                 <div className="flex justify-between text-emerald-700 font-medium">
                   <span>Subsidi Beasiswa CSR PT Inti Dinamis</span>
@@ -165,7 +171,9 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                 </div>
                 <div className="pt-2 border-t border-red-200/70 flex justify-between items-center font-bold text-slate-900 text-sm sm:text-base">
                   <span>Total yang Anda Bayar</span>
-                  <span className="text-emerald-600 text-lg">Rp 0 (GRATIS)</span>
+                  <span className="text-emerald-600 text-lg">
+                    Rp 0 (GRATIS)
+                  </span>
                 </div>
               </div>
             </div>
@@ -176,7 +184,10 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                 Semua Fasilitas Ini Termasuk:
               </h4>
               {deliverables.map((item) => (
-                <div key={item} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700">
+                <div
+                  key={item}
+                  className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700"
+                >
                   <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
                   <span>{item}</span>
                 </div>
@@ -194,12 +205,13 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
               </div>
               <div className="w-full bg-amber-200 rounded-full h-2.5 overflow-hidden">
                 <div
-                  className="bg-gradient-to-r from-amber-500 to-red-600 h-2.5 rounded-full"
+                  className="bg-linear-to-r from-amber-500 to-red-600 h-2.5 rounded-full"
                   style={{ width: "87%" }}
                 />
               </div>
               <p className="mt-2 text-[11px] text-amber-800">
-                Pendaftaran akan otomatis ditutup saat batas 150 peserta tercapai.
+                Pendaftaran akan otomatis ditutup saat batas 150 peserta
+                tercapai.
               </p>
             </div>
           </div>
@@ -218,18 +230,29 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                   Cek WhatsApp & Email Inbox Anda!
                 </h4>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed max-w-md mx-auto">
-                  Terima kasih, <strong className="text-slate-900">{submittedData.fullName}</strong>!
-                  Kursi Anda untuk seminar <span className="font-semibold text-red-600">{eventTitle}</span> telah diamankan.
+                  Terima kasih,{" "}
+                  <strong className="text-slate-900">
+                    {submittedData.fullName}
+                  </strong>
+                  ! Kursi Anda untuk seminar{" "}
+                  <span className="font-semibold text-red-600">
+                    {eventTitle}
+                  </span>{" "}
+                  telah diamankan.
                 </p>
 
                 <div className="mt-6 rounded-2xl border border-slate-100 bg-slate-50 p-5 text-left text-xs sm:text-sm text-slate-600 space-y-2">
                   <div className="flex justify-between">
                     <span className="text-slate-400">Email:</span>
-                    <span className="font-semibold text-slate-900">{submittedData.email}</span>
+                    <span className="font-semibold text-slate-900">
+                      {submittedData.email}
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-400">WhatsApp:</span>
-                    <span className="font-semibold text-slate-900">{submittedData.phone}</span>
+                    <span className="font-semibold text-slate-900">
+                      {submittedData.phone}
+                    </span>
                   </div>
                   {submittedData.companyOrInstitution && (
                     <div className="flex justify-between">
@@ -242,18 +265,22 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                   {submittedData.jobTitle && (
                     <div className="flex justify-between">
                       <span className="text-slate-400">Posisi:</span>
-                      <span className="font-semibold text-slate-900">{submittedData.jobTitle}</span>
+                      <span className="font-semibold text-slate-900">
+                        {submittedData.jobTitle}
+                      </span>
                     </div>
                   )}
                 </div>
 
                 <p className="mt-5 text-xs text-slate-500">
-                  Tautan akses Zoom dan panduan teknis telah dikirimkan ke email Anda. Tim panitia juga akan mengirimkan reminder via WhatsApp 1 hari sebelum acara dimulai.
+                  Tautan akses Zoom dan panduan teknis telah dikirimkan ke email
+                  Anda. Tim panitia juga akan mengirimkan reminder via WhatsApp
+                  1 hari sebelum acara dimulai.
                 </p>
 
                 <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a
-                    href="https://wa.me/628118888000?text=Halo%20Admin%20Inti%20Dinamis,%20saya%20sudah%20mendaftar%20seminar%20Career%20Acceleration"
+                    href="https://wa.me/62811855212?text=Halo%20Admin%20Inti%20Dinamis,%20saya%20sudah%20mendaftar%20seminar%20Career%20Acceleration"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white hover:bg-emerald-700 transition-colors"
@@ -284,7 +311,8 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                     Amankan Kursi Gratis Anda
                   </h3>
                   <p className="mt-1 text-xs sm:text-sm text-slate-500">
-                    Lengkapi data diri Anda untuk menerima link akses Zoom dan Exclusive Action Workbook.
+                    Lengkapi data diri Anda untuk menerima link akses Zoom dan
+                    Exclusive Action Workbook.
                   </p>
                 </div>
 
@@ -292,7 +320,9 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                   <div className="mb-6 flex items-start gap-3 rounded-xl border border-rose-200 bg-rose-50 p-4 text-xs text-rose-700">
                     <AlertCircle className="h-4 w-4 shrink-0 mt-0.5" />
                     <p>
-                      Terjadi kendala saat mengirimkan pendaftaran. Silakan periksa koneksi internet Anda atau hubungi admin via WhatsApp.
+                      Terjadi kendala saat mengirimkan pendaftaran. Silakan
+                      periksa koneksi internet Anda atau hubungi admin via
+                      WhatsApp.
                     </p>
                   </div>
                 )}
@@ -343,7 +373,8 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
                         className="w-full rounded-xl border border-slate-300 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-red-600 focus:outline-none focus:ring-2 focus:ring-red-600/20 transition-all"
                       />
                       <span className="block text-[11px] text-slate-400 mt-1">
-                        *Tautan Zoom akan dikirimkan langsung ke nomor WhatsApp ini.
+                        *Tautan Zoom akan dikirimkan langsung ke nomor WhatsApp
+                        ini.
                       </span>
                     </div>
                   </div>
@@ -380,7 +411,8 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
 
                   <div>
                     <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Tantangan Karir Utama yang Ingin Anda Selesaikan (Opsional)
+                      Tantangan Karir Utama yang Ingin Anda Selesaikan
+                      (Opsional)
                     </label>
                     <textarea
                       name="notes"
@@ -409,7 +441,10 @@ export function ResolutionSection({ eventTitle, eventSlug }: Props) {
 
                   <div className="flex items-center justify-center gap-2 text-[11px] text-slate-400 pt-1">
                     <ShieldCheck className="h-4 w-4 text-emerald-600" />
-                    <span>Data Anda 100% aman dan terjaga kerahasiaannya. Tanpa spam.</span>
+                    <span>
+                      Data Anda 100% aman dan terjaga kerahasiaannya. Tanpa
+                      spam.
+                    </span>
                   </div>
                 </div>
               </form>
