@@ -5,7 +5,7 @@ export function ExperienceSection() {
   return (
     <section
       id="pengalaman"
-      className="py-14 lg:py-20 bg-slate-50 border-b border-slate-200/80"
+      className="py-12 lg:py-16 bg-white border-b border-slate-100"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header - Clean & punchy */}
@@ -22,20 +22,18 @@ export function ExperienceSection() {
           </p>
         </div>
 
-        {/* Client Cards Grid */}
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4">
+        {/* Compact Logos Grid */}
+        <div className="mt-10 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-3 sm:gap-4 items-center">
           {CLIENTS.map((client) => (
             <div
               key={client.name}
-              className="flex items-center justify-center rounded-xl sm:rounded-2xl border border-slate-200/90 bg-white p-3.5 sm:p-4 h-20 sm:h-24 shadow-2xs hover:border-red-200 hover:shadow-md transition-all group"
+              className="flex h-12 sm:h-14 items-center justify-center p-1.5 group"
             >
-              <div className="flex h-full w-full items-center justify-center overflow-hidden">
-                <Image
-                  src={client.logo}
-                  alt={`Logo ${client.name}`}
-                  className="max-h-12 sm:max-h-14 max-w-[85%] w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+              <Image
+                src={client.logo}
+                alt={`Logo ${client.name}`}
+                className="max-h-8 sm:max-h-9 max-w-[90%] w-auto h-auto object-contain transition-transform duration-200 group-hover:scale-110"
+              />
             </div>
           ))}
         </div>
