@@ -17,8 +17,9 @@ export function ExperienceSection() {
             Dipercaya oleh Beragam Industri
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600">
-            Berbagai perusahaan multinasional, korporasi nasional, dan institusi
-            terkemuka yang telah bermitra bersama PT Inti Dinamis.
+            Dipercaya oleh berbagai perusahaan multinasional, korporasi
+            nasional, dan institusi terkemuka sebagai mitra pengembangan sumber
+            daya manusia.
           </p>
         </div>
 

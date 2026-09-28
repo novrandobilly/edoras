@@ -21,7 +21,8 @@ export function GallerySection() {
     {
       id: 1,
       title: "Executive Leadership Training",
-      subtitle: "Fasilitasi kepemimpinan manajerial dan adaptasi peran kepemimpinan strategis",
+      subtitle:
+        "Fasilitasi kepemimpinan manajerial dan adaptasi peran kepemimpinan strategis",
       client: "Tunas Ridean Group",
       category: "workshop",
       badge: "Leadership Training",
@@ -30,7 +31,8 @@ export function GallerySection() {
     {
       id: 2,
       title: "Potential Assessment & Simulation",
-      subtitle: "Asesmen potensi kompetensi talenta dan simulasi pemecahan masalah tim",
+      subtitle:
+        "Asesmen potensi kompetensi talenta dan simulasi pemecahan masalah tim",
       client: "PT Voksel Electric Tbk",
       category: "assessment",
       badge: "Potential Assessment",
@@ -39,7 +41,8 @@ export function GallerySection() {
     {
       id: 3,
       title: "Team Building & Outbound Learning",
-      subtitle: "Program experiential learning di alam bebas untuk memperkuat sinergi tim",
+      subtitle:
+        "Program experiential learning di alam bebas untuk memperkuat sinergi tim",
       client: "Adyawinsa Group",
       category: "outbound",
       badge: "Team Building",
@@ -48,7 +51,8 @@ export function GallerySection() {
     {
       id: 4,
       title: "Personal Effectiveness Workshop",
-      subtitle: "Pelatihan pembentukan mindset produktif, inisiatif, dan kinerja tim yang efektif",
+      subtitle:
+        "Pelatihan pembentukan mindset produktif, inisiatif, dan kinerja tim yang efektif",
       client: "DBC - Djabesmen Co.",
       category: "workshop",
       badge: "In-House Workshop",
@@ -62,21 +66,28 @@ export function GallerySection() {
       : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
-    <section id="galeri" className="py-14 lg:py-20 bg-white border-b border-slate-100">
+    <section
+      id="galeri"
+      className="py-14 lg:py-20 bg-white border-b border-slate-100"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-widest text-red-600">Galeri</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-red-600">
+            Galeri
+          </span>
           <h2 className="mt-1.5 text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-950">
             Dokumentasi Aktivitas
           </h2>
           <p className="mt-3.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-            Potret nyata berbagai program pendampingan, asesmen kompetensi, pelatihan kepemimpinan, dan experiential learning bersama mitra korporasi.
+            Potret nyata berbagai program pendampingan, asesmen kompetensi,
+            pelatihan kepemimpinan, dan experiential learning bersama mitra
+            korporasi.
           </p>
         </div>
 
         {/* Minimal Category Tabs */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
+        {/* <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
           {categories.map((cat) => (
             <button
               key={cat.id}
@@ -90,7 +101,7 @@ export function GallerySection() {
               {cat.label}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Gallery Grid (2x2 on desktop, clean & focused) */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">

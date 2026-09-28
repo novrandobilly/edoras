@@ -90,11 +90,11 @@ export function TeamSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-widest text-red-600">
-            Tim Ahli
-          </span>
           <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-950">
-            Integrated Expertise for People, Leadership &amp; Performance
+            Integrated Expertise for
+          </h2>
+          <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-950">
+            People, Leadership &amp; Performance
           </h2>
           <div className="mt-4 space-y-2.5 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
             <p>
