@@ -1,0 +1,21 @@
+{
+  "name": "PT Inti Dinamis - Konsultan SDM & Organisasi",
+  "short_name": "Inti Dinamis",
+  "description": "Mitra konsultan SDM dan organisasi sejak 2005 di Jakarta, Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/logo-intidinamis.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-intidinamis.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

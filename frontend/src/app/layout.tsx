@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AppProviders } from "@/components/providers/AppProviders";
+import { siteMetadata, siteViewport, siteStructuredData } from "@/constants/metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import { siteMetadata } from "@/constants/metadata";
-
+export const viewport: Viewport = siteViewport;
 export const metadata: Metadata = siteMetadata;
 
 export default function RootLayout({
@@ -28,6 +28,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-slate-50 font-sans text-slate-900">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(siteStructuredData),
+          }}
+        />
         <AppProviders>{children}</AppProviders>
       </body>
     </html>
