@@ -24,11 +24,9 @@ import logoDanone from "@/assets/client-collections/danone.webp";
 import logoDbc2 from "@/assets/client-collections/dbc2.webp";
 import logoDianTaksi from "@/assets/client-collections/dian-taksi.webp";
 import logoDwiPerkasa from "@/assets/client-collections/dwi-perkasa.webp";
-import logoExpressGroup from "@/assets/client-collections/express-group.webp";
 import logoGayaMotor from "@/assets/client-collections/gaya-motor.webp";
 import logoGlobalKalimantan from "@/assets/client-collections/global-kalimantan.webp";
 import logoGondola from "@/assets/client-collections/gondola.webp";
-import logoGranito from "@/assets/client-collections/granito.webp";
 import logoHonda from "@/assets/client-collections/honda.webp";
 import logoInternusaTriKencana from "@/assets/client-collections/internusa-tri-kencana.webp";
 import logoIntertamaTrikencana from "@/assets/client-collections/intertama-trikencana.webp";
@@ -40,7 +38,6 @@ import logoKansaiPaint from "@/assets/client-collections/kansai-paint.webp";
 import logoKawanLama from "@/assets/client-collections/kawan-lama.webp";
 import logoLautanWarnaSari2 from "@/assets/client-collections/lautan-warna-sari-2.webp";
 import logoLimawiraWisesa from "@/assets/client-collections/limawira-wisesa.webp";
-import logoMapan from "@/assets/client-collections/mapan.webp";
 import logoMensa from "@/assets/client-collections/mensa.webp";
 import logoMetindoEra from "@/assets/client-collections/metindo-era.webp";
 import logoMetindo from "@/assets/client-collections/metindo.webp";
@@ -104,11 +101,9 @@ export const CLIENTS: Client[] = [
   { name: "Dbc2", logo: logoDbc2 },
   { name: "Dian Taksi", logo: logoDianTaksi },
   { name: "Dwi Perkasa", logo: logoDwiPerkasa },
-  { name: "Express Group", logo: logoExpressGroup },
   { name: "Gaya Motor", logo: logoGayaMotor },
   { name: "Global Kalimantan", logo: logoGlobalKalimantan },
   { name: "Gondola", logo: logoGondola },
-  { name: "Granito", logo: logoGranito },
   { name: "Honda", logo: logoHonda },
   { name: "Internusa Tri Kencana", logo: logoInternusaTriKencana },
   { name: "Intertama Trikencana", logo: logoIntertamaTrikencana },
@@ -120,7 +115,6 @@ export const CLIENTS: Client[] = [
   { name: "Kawan Lama", logo: logoKawanLama },
   { name: "Lautan Warna Sari 2", logo: logoLautanWarnaSari2 },
   { name: "Limawira Wisesa", logo: logoLimawiraWisesa },
-  { name: "Mapan", logo: logoMapan },
   { name: "Mensa", logo: logoMensa },
   { name: "Metindo Era", logo: logoMetindoEra },
   { name: "Metindo", logo: logoMetindo },
