@@ -74,6 +74,7 @@ import logoVokselElectric from "@/assets/client-collections/voksel-electric.webp
 export interface Client {
   name: string;
   logo: StaticImageData;
+  scaleClass?: string;
 }
 
 export const CLIENTS: Client[] = [
@@ -84,7 +85,7 @@ export const CLIENTS: Client[] = [
   { name: "Kawan Lama", logo: logoKawanLama },
   { name: "Rucika", logo: logoRucika },
   { name: "Summarecon Agung", logo: logoSummareconAgung },
-  { name: "Honda", logo: logoHonda },
+  { name: "Honda", logo: logoHonda, scaleClass: "scale-125" },
   { name: "Isuzu", logo: logoIsuzu },
   { name: "Kansai Paint", logo: logoKansaiPaint },
   { name: "Pertaminas", logo: logoPertaminas },
@@ -93,16 +94,16 @@ export const CLIENTS: Client[] = [
   { name: "Sinarmas", logo: logoSinarmas },
 
   // Corporate & Institutional Clients
-  { name: "Agra Tata", logo: logoAgraTata },
+  { name: "Agra Tata", logo: logoAgraTata, scaleClass: "scale-125" },
   { name: "Air Putih", logo: logoAirPutih },
-  { name: "Aloka", logo: logoAloka },
+  { name: "Aloka", logo: logoAloka, scaleClass: "scale-125" },
   { name: "Amway", logo: logoAmway },
   { name: "Armada Auto Tara", logo: logoArmadaAutoTara },
-  { name: "Astra Agro Lestari", logo: logoAstraAgroLestari },
+  { name: "Astra Agro Lestari", logo: logoAstraAgroLestari, scaleClass: "scale-125" },
   { name: "Astra Daihatsu", logo: logoAstraDaihatsu },
   { name: "Astra Internasional", logo: logoAstraInternasional },
   { name: "Astra Peugeot", logo: logoAstraPeugeot },
-  { name: "Astra Poltek", logo: logoAstraPoltek },
+  { name: "Astra Poltek", logo: logoAstraPoltek, scaleClass: "scale-130" },
   { name: "Astra World", logo: logoAstraWorld },
   { name: "Ate Adyawinsa", logo: logoAteAdyawinsa },
   { name: "Auto2000", logo: logoAuto2000 },
@@ -131,22 +132,22 @@ export const CLIENTS: Client[] = [
   { name: "Mustika Copy", logo: logoMustikaCopy },
   { name: "Noah Arkindo", logo: logoNoahArkindo },
   { name: "Packindo", logo: logoPackindo },
-  { name: "Pertamedika", logo: logoPertamedika },
+  { name: "Pertamedika", logo: logoPertamedika, scaleClass: "scale-125" },
   { name: "Peruri 2", logo: logoPeruri2 },
   { name: "Planet Surf Copy", logo: logoPlanetSurfCopy },
   { name: "Puninar", logo: logoPuninar },
-  { name: "Royal Board 2", logo: logoRoyalBoard2 },
+  { name: "Royal Board 2", logo: logoRoyalBoard2, scaleClass: "scale-125" },
   { name: "Rukun Pt", logo: logoRukunPt },
   { name: "Showa", logo: logoShowa },
   { name: "Sigma", logo: logoSigma },
   { name: "Skylift Indonesia", logo: logoSkyliftIndonesia },
   { name: "Timezone", logo: logoTimezone },
-  { name: "Titis Sampurna", logo: logoTitisSampurna },
+  { name: "Titis Sampurna", logo: logoTitisSampurna, scaleClass: "scale-120" },
   { name: "Transmedia", logo: logoTransmedia },
   { name: "Triputra", logo: logoTriputra },
-  { name: "Tunas Group", logo: logoTunasGroup },
+  { name: "Tunas Group", logo: logoTunasGroup, scaleClass: "scale-125" },
   { name: "Tunastoyota", logo: logoTunastoyota },
-  { name: "Ui", logo: logoUi },
+  { name: "Ui", logo: logoUi, scaleClass: "scale-125" },
   { name: "Uob Buana", logo: logoUobBuana },
   { name: "Verena Multi Finance", logo: logoVerenaMultiFinance },
   { name: "Voksel Electric", logo: logoVokselElectric },

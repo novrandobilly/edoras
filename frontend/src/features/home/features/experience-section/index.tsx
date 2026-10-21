@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CLIENTS } from "./clients";
+import { cn } from "@/lib/utils";
 
 export function ExperienceSection() {
   return (
@@ -30,11 +31,18 @@ export function ExperienceSection() {
               key={client.name}
               className="flex h-12 sm:h-14 items-center justify-center p-1.5 group"
             >
-              <Image
-                src={client.logo}
-                alt={`Logo ${client.name}`}
-                className="max-h-8 sm:max-h-9 max-w-[90%] w-auto h-auto object-contain transition-transform duration-200 group-hover:scale-110"
-              />
+              <div
+                className={cn(
+                  "flex items-center justify-center w-full h-full",
+                  client.scaleClass,
+                )}
+              >
+                <Image
+                  src={client.logo}
+                  alt={`Logo ${client.name}`}
+                  className="max-h-8 sm:max-h-9 max-w-[90%] w-auto h-auto object-contain transition-transform duration-200 group-hover:scale-110"
+                />
+              </div>
             </div>
           ))}
         </div>
