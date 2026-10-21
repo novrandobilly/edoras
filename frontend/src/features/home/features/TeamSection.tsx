@@ -100,13 +100,11 @@ export function TeamSection() {
             <p>
               Kami menghadirkan tim praktisi dengan keahlian yang saling
               melengkapi dalam{" "}
-              <p>
-                <strong className="font-semibold text-slate-900">
-                  Human Capital, Leadership, Talent, Coaching, dan Behavioral
-                  Transformation
-                </strong>
-                .
-              </p>
+              <strong className="font-semibold text-slate-900">
+                Human Capital, Leadership, Talent, Coaching, dan Behavioral
+                Transformation
+              </strong>
+              .
             </p>
             <p>
               Dengan memadukan perspektif{" "}
@@ -126,28 +124,30 @@ export function TeamSection() {
           {members.map((member) => (
             <div
               key={member.name}
-              className="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-6 shadow-2xs hover:border-red-200 hover:shadow-lg transition-all group"
+              className="flex flex-col justify-between rounded-2xl border border-slate-200/90 bg-white p-5 sm:p-6 shadow-2xs hover:border-red-200 hover:shadow-lg transition-all group"
             >
               <div>
-                {/* Photo Frame */}
-                <div className="relative aspect-3/4 w-full overflow-hidden rounded-xl bg-slate-100 mb-5 border border-slate-200/80 group-hover:border-red-200 transition-colors">
+                {/* Photo Frame - Optimized to stay compact and balanced on mobile screens while preserving full desktop proportions */}
+                <div className="relative aspect-3/4 w-full max-w-[200px] sm:max-w-[230px] md:max-w-none mx-auto overflow-hidden rounded-xl bg-slate-100 mb-5 border border-slate-200/80 group-hover:border-red-200 transition-colors shadow-2xs">
                   <Image
                     src={member.photo}
                     alt={`Foto ${member.name}`}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 350px"
+                    sizes="(max-width: 640px) 200px, (max-width: 768px) 230px, (max-width: 1200px) 33vw, 350px"
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
 
-                <h3 className="text-lg sm:text-xl font-bold text-slate-950 group-hover:text-red-600 transition-colors">
-                  {member.name}
-                </h3>
-                <p className="mt-1 text-xs sm:text-sm font-normal italic text-slate-500 leading-snug">
-                  {member.title}
-                </p>
+                <div className="text-center md:text-left">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-950 group-hover:text-red-600 transition-colors">
+                    {member.name}
+                  </h3>
+                  <p className="mt-1 text-xs sm:text-sm font-normal italic text-slate-500 leading-snug">
+                    {member.title}
+                  </p>
+                </div>
 
-                <div className="mt-4 pt-3.5 border-t border-slate-100">
+                <div className="mt-4 pt-3.5 border-t border-slate-100 text-left">
                   <h4 className="text-sm font-bold text-slate-900 tracking-tight">
                     {member.focus}
                   </h4>
@@ -158,7 +158,7 @@ export function TeamSection() {
               </div>
 
               {/* Badges */}
-              <div className="mt-5 pt-3.5 border-t border-slate-100 flex flex-wrap gap-1.5">
+              <div className="mt-5 pt-3.5 border-t border-slate-100 flex flex-wrap gap-1.5 justify-center md:justify-start">
                 {member.credentials.map((badge) => (
                   <span
                     key={badge}
